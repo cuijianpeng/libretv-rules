@@ -354,8 +354,17 @@ App 本地仓库：
 - 直播播放不再传 `start`，修复 mpv `--force-seekable=yes` 报错
 - 播放错误提示中文化，保留重试按钮
 
+
+### 源健康度 / 播放自动重试
+
+- `SourceHealthStore`：连续失败 3 次冷却 30 分钟，6 次 24 小时，9 次 7 天
+- 成功一次自动清除失败记录
+- 搜索页跳过冷却中的源，标签显示「冷却中」
+- 源管理可手动「恢复」冷却源
+- 播放器错误自动重试一次，仍失败保留手动重试
+
 ### 验证更新
 
-- `flutter test` 29 个测试通过
+- `flutter test` 31 个测试通过
 - `flutter build macos --debug` 成功
 - `flutter build ios --simulator --debug` 成功
