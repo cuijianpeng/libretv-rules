@@ -64,12 +64,13 @@
 - GitHub：https://github.com/cuijianpeng/libretv-rules
 - 分支：`main`
 - 初始 commit：`7b7eb99 init: source catalog and parser rules`
-- 7 条规则、5 个点播源（2 个启用）、6 个直播源（4 个启用）
-- 启用点播源：`demo-fixture`（公开演示）和 `open-movies`（Blender/W3C 公开版权影片）
-- 启用直播源：iptv-org 中国、中文、香港、台湾 4 个公开 M3U 索引
+- 8 条规则、6 个点播源（3 个启用）、7 个直播源（5 个启用）
+- 启用点播源：`demo-fixture`（公开演示）、`open-movies`（Blender 开放电影）、`nasa-video`（NASA 公开视频库）
+- 启用直播源：iptv-org 中国/中文/香港/台湾 4 个索引，外加 `stable-cn` 精选央视/卫视
 - `archive-org` 源默认关闭：大陆网络通常无法直连 archive.org
+- `stable-cn` 数据在 `fixtures/live/stable-cn.m3u`，是从 iptv-org 中国列表实测筛出的 19 个频道
 - 演示源 `demo-fixture` 数据在 `fixtures/demo/cms.json`，`open-movies` 数据在 `fixtures/open-movies/cms.json`
-- `manifest.json` 已签名（version 10），tag `v10`
+- `manifest.json` 已签名（version 11），tag `v11`
 - 演示/公开版权 fixture 与 manifest 走 `ghproxy.net` 镜像访问 raw.githubusercontent 固定 tag
 - 本机实测 raw.githubusercontent 大面积超时，故默认改用镜像；jsDelivr（fastly/gcore）可作备用
 - 演示 HLS 已从 `test-streams.mux.dev` 换到 Apple `devstreaming-cdn` 公开测试流

@@ -314,6 +314,18 @@ App 本地仓库：
 - VOD：请求 CMS 搜索接口并校验 JSON
 - 直播：拉取 M3U 并统计频道数
 
+### v11 更多公开源
+
+- 新增 `nasa` 引擎和 `nasa-video` 源：NASA 公开视频库，可搜索、可播放
+  - 搜索 `images-api.nasa.gov/search`，详情 `/asset/{id}` 取文件
+  - 优先 `~mobile.mp4`，自动 http→https 并编码空格
+  - 详情额外读取 `metadata.json` 补简介
+- 新增 `stable-cn` 直播源：从 iptv-org 中国列表实测筛出的 19 个频道
+  - CCTV-1/2/3/7/8/9/10/11/12/13/14/15/16/17、CGTN 1/2、湖南/安徽/西藏卫视
+  - 数据在 `fixtures/live/stable-cn.m3u`，本机实测首 6 个全部可连
+- 省级卫视当前大面积超时/地区限制，未纳入精选列表
+- manifest `v11` 签名并打 tag
+
 ### 验证更新
 
 - `flutter test` 25 个测试通过

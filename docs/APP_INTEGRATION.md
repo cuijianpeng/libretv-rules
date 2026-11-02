@@ -131,6 +131,7 @@ assets/rulepack/
 | `http-json` | ✅ | ✅ | JSONPath 子集映射 |
 | `html-regex` | — | ✅ | 详情页正则提取 m3u8 |
 | `archive-org` | ✅ | ✅ | archive.org 公共领域影片，按文件列表挑视频 |
+| `nasa` | ✅ | ✅ | NASA 公开视频库，取 mobile/small mp4 |
 | `direct` | — | ✅ | 直链 |
 | `m3u` | 待直播模块 | 待直播模块 | 频道列表 |
 | `xmltv` | 待直播模块 | 待直播模块 | 节目单 |
