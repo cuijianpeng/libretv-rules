@@ -332,6 +332,16 @@ App 本地仓库：
 - 详情弹层显示最高画质，如 `1080P`
 - 非 master playlist 自动隐藏
 
+### v13 补全公开直播列表
+
+- 新增 iptv-org 国家列表：澳门、新加坡、马来西亚、日本，默认启用
+- 新增 iptv-org 分类列表：新闻、体育、少儿、纪录、音乐、全量索引，默认关闭
+- 新增 `stable-cn-extended`：23 个省级/地方卫视，未做可用性过滤，默认关闭
+- 公共 EPG 实测不可用：
+  - `live.fanmingming.com/e.xml`、`epg.112114.xyz/pp.xml` 均 40s 超时
+  - `epg.pw` 可下载但单文件 40–80 万字节、耗时 60s+，频道 ID 与 iptv-org 的 `tvg-id` 不匹配
+- manifest `v13` 签名并打 tag
+
 ### 验证更新
 
 - `flutter test` 29 个测试通过
