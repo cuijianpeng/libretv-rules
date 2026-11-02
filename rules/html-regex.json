@@ -1,0 +1,25 @@
+{
+  "$schema": "../schemas/rule.schema.json",
+  "id": "html-regex",
+  "name": "详情页 HTML 正则",
+  "version": 1,
+  "engine": "html-regex",
+  "capabilities": ["detail"],
+  "request": {
+    "detail": {
+      "url": "{baseUrl}/index.php/vod/detail/id/{id}.html",
+      "method": "GET",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+      }
+    }
+  },
+  "extract": {
+    "detail": {
+      "titleRegex": "<h1[^>]*>([^<]+)</h1>",
+      "episodeRegex": "\\$(https?://[^\"'\\s]+?\\.m3u8)",
+      "dedupeEpisodes": true
+    }
+  },
+  "notes": "用于列表接口不返回播放地址、必须爬详情页的源。"
+}

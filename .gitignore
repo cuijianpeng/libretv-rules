@@ -1,0 +1,6 @@
+node_modules/
+dist/
+keys/private.pem
+keys/*.private
+.DS_Store
+*.log

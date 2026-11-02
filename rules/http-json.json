@@ -1,0 +1,43 @@
+{
+  "$schema": "../schemas/rule.schema.json",
+  "id": "http-json",
+  "name": "通用 JSON 接口",
+  "version": 1,
+  "engine": "http-json",
+  "capabilities": ["search", "detail"],
+  "request": {
+    "search": {
+      "url": "{baseUrl}?wd={keyword}&page={page}",
+      "method": "GET",
+      "headers": {
+        "Accept": "application/json"
+      }
+    },
+    "detail": {
+      "url": "{baseUrl}?id={id}",
+      "method": "GET",
+      "headers": {
+        "Accept": "application/json"
+      }
+    }
+  },
+  "extract": {
+    "search": {
+      "list": "$.data.list",
+      "id": "$.id",
+      "name": "$.title",
+      "pic": "$.cover",
+      "type": "$.category",
+      "year": "$.year",
+      "remarks": "$.remarks"
+    },
+    "detail": {
+      "episodes": "$.data.play_url",
+      "episodeFormat": "cms",
+      "title": "$.data.title",
+      "cover": "$.data.cover",
+      "description": "$.data.description"
+    }
+  },
+  "notes": "用 JSONPath 子集做字段映射，不执行任何代码。复杂签名/加密接口应使用服务端或内置引擎。"
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "../schemas/sources-live.schema.json",
+  "version": 1,
+  "updatedAt": "2026-11-02",
+  "sources": [
+    {
+      "id": "example-live",
+      "name": "示例直播源",
+      "url": "https://example.com/list.m3u",
+      "epg": "https://example.com/epg.xml",
+      "rule": "m3u",
+      "enabled": false,
+      "tags": ["示例", "IPTV"],
+      "note": "占位示例，请替换成自己的 M3U 订阅。"
+    }
+  ]
+}

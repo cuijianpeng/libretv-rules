@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "libretv-rules",
+  "version": 1,
+  "minAppVersion": "0.1.0",
+  "publishedAt": "2026-11-02T07:41:11.531Z",
+  "files": [
+    {
+      "path": "rules/cms-standard.json",
+      "sha256": "86c0db8b740f7c28c1e4cefe7b66c231afb796b2d3b2db3b2c57bb57a7c8c36c"
+    },
+    {
+      "path": "rules/direct.json",
+      "sha256": "22348dc8669064a8f703730fe8f3b9743ad4b02ac1b055a48800fd53a47a6f93"
+    },
+    {
+      "path": "rules/html-regex.json",
+      "sha256": "c64730f0dea0b1224d2da77f57dc34aa1d668517e67f550904315944e6163889"
+    },
+    {
+      "path": "rules/http-json.json",
+      "sha256": "06c8f95f327b0844b7eaad189bd16bc02bc0b0a3f861f25da5e961e4ef634156"
+    },
+    {
+      "path": "rules/m3u.json",
+      "sha256": "2aa790afb9cc2217796377e53d31251a13a687bd35465ec34d77e185a078d7bd"
+    },
+    {
+      "path": "rules/xmltv.json",
+      "sha256": "22e6eba906d1cbc74f9101ad9baef32d0049fd66533889e7817ce9352a84c347"
+    },
+    {
+      "path": "sources/live.json",
+      "sha256": "1f12cac478adcab2969416951b14d31b67f4def2c6403d57a7bb5b20e9cc5463"
+    },
+    {
+      "path": "sources/vod.json",
+      "sha256": "9f857c1869f58e2649242bb3b5aaccb3059b70070fbde9e3807e14c14ff9d40c"
+    }
+  ],
+  "signature": ""
+}

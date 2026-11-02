@@ -1,0 +1,40 @@
+{
+  "$schema": "../schemas/rule.schema.json",
+  "id": "cms-standard",
+  "name": "Apple CMS 标准接口",
+  "version": 1,
+  "engine": "cms-json",
+  "capabilities": ["search", "detail"],
+  "match": {
+    "urlPattern": "/api.php/provide/vod"
+  },
+  "request": {
+    "search": "?ac=videolist&wd={keyword}&pg={page}",
+    "detail": "?ac=videolist&ids={id}",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+      "Accept": "application/json"
+    }
+  },
+  "pagination": {
+    "pageCountField": "pagecount",
+    "maxPages": 5
+  },
+  "map": {
+    "list": "list",
+    "id": "vod_id",
+    "name": "vod_name",
+    "pic": "vod_pic",
+    "type": "type_name",
+    "year": "vod_year",
+    "area": "vod_area",
+    "remarks": "vod_remarks"
+  },
+  "detail": {
+    "playUrlField": "vod_play_url",
+    "episodeFormat": "cms",
+    "fallbackHtml": "/index.php/vod/detail/id/{id}.html",
+    "htmlM3u8Regex": "\\$(https?://[^\"'\\s]+?\\.m3u8)"
+  },
+  "notes": "标准 Apple CMS 采集接口。分集格式：线路1$$$线路2，集名$URL#集名$URL。优先选择包含 .m3u8 的线路。"
+}

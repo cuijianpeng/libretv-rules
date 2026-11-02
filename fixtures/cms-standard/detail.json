@@ -1,0 +1,21 @@
+{
+  "code": 1,
+  "msg": "数据列表",
+  "page": 1,
+  "pagecount": 1,
+  "limit": "20",
+  "total": 1,
+  "list": [
+    {
+      "vod_id": 1001,
+      "vod_name": "示例影片 A",
+      "vod_pic": "https://example.com/poster-a.jpg",
+      "type_name": "科幻片",
+      "vod_year": "2026",
+      "vod_area": "中国",
+      "vod_remarks": "HD国语",
+      "vod_content": "这是一段示例简介，用于验证详情解析。",
+      "vod_play_url": "第01集$https://example.com/a/01.m3u8#第02集$https://example.com/a/02.m3u8"
+    }
+  ]
+}

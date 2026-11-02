@@ -1,0 +1,9 @@
+{
+  "$schema": "../schemas/rule.schema.json",
+  "id": "direct",
+  "name": "直链播放",
+  "version": 1,
+  "engine": "direct",
+  "capabilities": ["play"],
+  "notes": "用于 mp4 / m3u8 / flv 直链，不做搜索和详情解析。"
+}

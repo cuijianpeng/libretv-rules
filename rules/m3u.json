@@ -1,0 +1,14 @@
+{
+  "$schema": "../schemas/rule.schema.json",
+  "id": "m3u",
+  "name": "M3U 直播列表",
+  "version": 1,
+  "engine": "m3u",
+  "capabilities": ["live"],
+  "extract": {
+    "channelNameAttributes": ["tvg-name", "tvg-id"],
+    "groupAttribute": "group-title",
+    "logoAttribute": "tvg-logo"
+  },
+  "notes": "解析 M3U/M3U8 播放列表，提取频道名、分组、台标。EPG 走单独的 xmltv 规则。"
+}

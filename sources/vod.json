@@ -1,0 +1,28 @@
+{
+  "$schema": "../schemas/sources-vod.schema.json",
+  "version": 1,
+  "updatedAt": "2026-11-02",
+  "sources": [
+    {
+      "id": "example-cms",
+      "name": "示例采集站",
+      "type": "cms",
+      "url": "https://example.com/api.php/provide/vod",
+      "detail": "https://example.com",
+      "rule": "cms-standard",
+      "enabled": false,
+      "tags": ["示例", "电影", "剧集"],
+      "note": "占位示例，请替换成自己的源；默认关闭，避免误用。"
+    },
+    {
+      "id": "example-http-json",
+      "name": "示例 JSON 接口",
+      "type": "http-json",
+      "url": "https://api.example.com/videos",
+      "rule": "http-json",
+      "enabled": false,
+      "tags": ["示例"],
+      "note": "展示 http-json 规则如何挂到源上。"
+    }
+  ]
+}

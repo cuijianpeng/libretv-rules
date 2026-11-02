@@ -1,0 +1,19 @@
+{
+  "name": "libretv-rules",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "LibreTV source catalog and parser rules, distributed as a signed JSON rule pack.",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build-manifest.mjs",
+    "build:sign": "node scripts/build-manifest.mjs --sign",
+    "sign": "node scripts/sign-manifest.mjs",
+    "verify": "node scripts/verify-manifest.mjs",
+    "public-key": "node scripts/public-key-raw.mjs",
+    "test": "node scripts/validate.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

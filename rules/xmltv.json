@@ -1,0 +1,14 @@
+{
+  "$schema": "../schemas/rule.schema.json",
+  "id": "xmltv",
+  "name": "XMLTV 节目单",
+  "version": 1,
+  "engine": "xmltv",
+  "capabilities": ["epg"],
+  "extract": {
+    "timeFormat": "yyyyMMddHHmmss Z",
+    "titleField": "title",
+    "descriptionField": "desc"
+  },
+  "notes": "解析 XMLTV 节目单，供直播页显示当前/下一节目。"
+}

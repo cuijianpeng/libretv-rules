@@ -1,0 +1,30 @@
+{
+  "code": 1,
+  "msg": "数据列表",
+  "page": 1,
+  "pagecount": 2,
+  "limit": "20",
+  "total": 2,
+  "list": [
+    {
+      "vod_id": 1001,
+      "vod_name": "示例影片 A",
+      "vod_pic": "https://example.com/poster-a.jpg",
+      "type_name": "科幻片",
+      "vod_year": "2026",
+      "vod_area": "中国",
+      "vod_remarks": "HD国语",
+      "vod_play_url": "第01集$https://example.com/a/01.m3u8#第02集$https://example.com/a/02.m3u8"
+    },
+    {
+      "vod_id": 1002,
+      "vod_name": "示例影片 B",
+      "vod_pic": "https://example.com/poster-b.jpg",
+      "type_name": "剧情片",
+      "vod_year": "2025",
+      "vod_area": "中国",
+      "vod_remarks": "全 12 集",
+      "vod_play_url": "线路一$https://example.com/share/1002#线路二$https://example.com/b/01.m3u8#第02集$https://example.com/b/02.m3u8"
+    }
+  ]
+}
