@@ -302,8 +302,14 @@ App 本地仓库：
 - 搜索 / 直播 / 源管理共用本地源
 - 单元测试覆盖三种订阅格式
 
+### 源测活
+
+- SourceManager 每个源支持「测活」
+- VOD：请求 CMS 搜索接口并校验 JSON
+- 直播：拉取 M3U 并统计频道数
+
 ### 验证更新
 
-- `flutter test` 23 个测试通过
+- `flutter test` 25 个测试通过
 - `flutter build macos --debug` 成功
 - `flutter build ios --simulator --debug` 成功
