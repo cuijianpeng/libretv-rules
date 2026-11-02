@@ -10,9 +10,9 @@
 - [x] 规则包加载、验签、内置回退
 - [x] `cms-json` / `http-json` / `html-regex` / `direct` 引擎
 - [x] 搜索页 + 源管理 + 源启用持久化
-- [ ] 生成正式 Ed25519 密钥
-- [ ] 规则包签名、tag、推送
-- [ ] App 默认使用远程签名规则包
+- [x] 生成正式 Ed25519 密钥
+- [x] 规则包签名、tag、推送
+- [x] App 默认使用远程签名规则包
 - [ ] App 加入 GitHub（等远程仓库）
 
 验收：
@@ -24,13 +24,15 @@
 
 ## 阶段 1：直播 / IPTV
 
-- [ ] M3U 解析器
-- [ ] XMLTV / EPG 解析器
-- [ ] LiveEngine：拉取、解析、缓存
-- [ ] 直播页：频道列表、分组、搜索、收藏
-- [ ] 直播播放器复用
-- [ ] 公开测试源 iptv-org
-- [ ] 单元测试
+- [x] M3U 解析器
+- [x] XMLTV / EPG 解析器
+- [x] LiveEngine：拉取、解析、缓存
+- [x] 直播页：频道列表、分组、搜索
+- [x] 直播播放器复用
+- [x] 公开测试源 iptv-org
+- [x] 单元测试
+- [ ] 收藏频道
+- [ ] EPG 多源匹配优化
 
 验收：
 
@@ -41,13 +43,14 @@
 
 ## 阶段 2：多平台
 
-- [ ] Android platform
-- [ ] iOS platform
-- [ ] Android TV（leanback / 焦点）
-- [ ] 平台权限与网络安全配置
-- [ ] 移动端布局（底部导航）
-- [ ] TV 布局（左侧 rail + 10-foot UI）
-- [ ] 构建验证
+- [x] Android platform
+- [x] iOS platform
+- [x] Android TV（leanback manifest / banner）
+- [x] 平台权限与网络安全配置
+- [x] 移动端布局（底部导航）
+- [ ] TV 布局（左侧 rail + 10-foot UI 深度适配）
+- [x] 构建验证（macOS / iOS simulator）
+- [ ] Android 构建（本机缺 Android SDK）
 
 验收：
 
@@ -57,9 +60,9 @@
 
 ## 阶段 3：日常使用能力
 
-- [ ] 播放进度持久化
-- [ ] 继续观看首页
-- [ ] 自动连播下一集
+- [x] 播放进度持久化
+- [x] 继续观看首页
+- [x] 自动连播下一集
 - [ ] 播放失败自动换源
 - [ ] 搜索源健康度 / 超时提示
 - [ ] 设置页：主题、规则包、清理缓存、关于

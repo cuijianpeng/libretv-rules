@@ -13,6 +13,7 @@ App 不再把源和解析逻辑写死，而是从这个仓库拉取一个**签�
 
 ## 文档
 
+- [总计划](docs/MASTER_PLAN.md)：分阶段目标、验收、执行顺序
 - [项目总览](docs/PROJECT.md)：目标、当前状态、架构、决策、限制、路线
 - [操作手册](docs/OPERATIONS.md)：环境、命令、发布、Git、排错
 - [App 集成](docs/APP_INTEGRATION.md)：manifest、验签、加载器、规则引擎

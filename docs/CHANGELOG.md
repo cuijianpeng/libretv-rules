@@ -127,3 +127,69 @@ App 搜索页默认选中演示源，可完成搜索 → 详情 → 选集 → �
 5. 源启用状态本地持久化
 6. 直播 M3U / XMLTV
 7. Android / iOS / Android TV
+
+## 后续增量（同日）
+
+### 规则包签名
+
+- 生成 Ed25519 密钥：`keys/private.pem` / `keys/public.pem`
+- `manifest.json` version 3 签名并打 tag `v3`
+- App 默认远程地址切换到签名 tag
+- 新增 `tool/check_rulepack.dart`：远程验签 + 文件 hash + sources/rules 解析
+- 验证输出：`signature: valid`、`version: 3`、`rule pack OK`
+
+### 直播 / IPTV
+
+- `lib/data/live/live_models.dart`
+- `m3u_parser.dart`：解析频道、分组、台标、去重
+- `xmltv_parser.dart`：解析 XMLTV、时区、当前/下一节目
+- `live_engine.dart`：拉取、gzip EPG、10 分钟缓存
+- `features/live/live_page.dart`：频道列表、分组、搜索、右侧详情、播放
+- `PlayerPage` 增加 `live` 模式：隐藏进度/倍速/选集，显示直播徽章
+- 规则包新增 `iptv-org-cn` 公开测试源
+- `manifest.json` version 4 签名并打 tag `v4`
+- `tool/check_live.dart` 验证：150 个频道
+
+### 多平台
+
+- `flutter create --platforms=android,ios`
+- Android：
+  - INTERNET 权限
+  - `usesCleartextTraffic`
+  - leanback uses-feature
+  - LEANBACK_LAUNCHER
+  - TV banner vector
+- iOS：
+  - 显示名 LibreTV
+  - ATS `NSAllowsArbitraryLoads`
+  - simulator 构建通过
+- 移动端底部导航
+- 首页 TopBar 紧凑模式、MediaRail 小卡片
+- Android SDK 未安装，APK 未验证
+
+### 播放进度
+
+- `PlaybackProgressStore` + `shared_preferences`
+- 每 5 秒/退出时保存
+- 播放器启动时 seek 到上次位置
+- 首页「继续观看」接本地进度
+- 播放完成自动下一集
+
+### 验证
+
+- `flutter analyze` 无问题
+- `flutter test` 13 个测试通过
+- `flutter build macos --debug` 成功
+- `flutter build ios --simulator --debug` 成功
+
+### 提交
+
+规则仓库：
+
+- `8dc141c release: sign rule pack v3`
+- `18ff2de release: add iptv-org test source, sign v4`
+
+App 本地仓库：
+
+- `c6bdbc8 feat: persist source enable overrides`
+- 本轮后续提交见 `git log`

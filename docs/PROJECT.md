@@ -50,16 +50,19 @@
 - 源管理：展示规则包里的源和规则，可在本地启用/停用
 - 源启用覆盖存 `shared_preferences`，不修改规则包
 - **公开演示源**：搜索 → 详情 → 3 集 → 播放器，全链路可验证
-- 首页推荐数据仍是 mock，搜索页是真实链路
+- **直播页**：M3U 频道列表、分组、搜索、播放
+- **播放进度**：本地保存，首页「继续观看」，自动连播下一集
+- **多平台**：macOS 已构建，iOS simulator 已构建，Android 工程已生成但本机缺 SDK
+- 首页推荐数据仍是 mock，搜索/直播是真实链路
 
 ### 规则仓库
 
 - GitHub：https://github.com/cuijianpeng/libretv-rules
 - 分支：`main`
 - 初始 commit：`7b7eb99 init: source catalog and parser rules`
-- 6 条规则、3 个点播源（其中 1 个是启用的公开演示源）、1 个直播占位源
+- 6 条规则、3 个点播源（其中 1 个是启用的公开演示源）、2 个直播源（其中 1 个是 iptv-org 公开测试源）
 - 演示源 `demo-fixture` 数据在 `fixtures/demo/cms.json`，播放地址是公开测试流
-- `manifest.json` 已生成（version 2），**尚未签名**
+- `manifest.json` 已签名（version 4），tag `v4`
 - 另外 2 个点播源和 1 个直播源仍是 `example.com` 占位，`enabled: false`
 
 ## 4. 架构
@@ -111,27 +114,24 @@
 
 ## 7. 已知限制
 
-- `libretv_app` 还没建 Git 仓库，只在本机。
-- `manifest.json` 未签名；远程加载未配置公钥时会跳过验签（仅开发用）。
-- 规则包里的占位源不可用，搜索页需要先填真实源。
-- `m3u` / `xmltv` 引擎尚未在 App 实现，直播页未接。
+- `libretv_app` 还没建 GitHub 仓库，只在本机。
+- Android SDK 未安装，Android 构建未验证。
+- `m3u` / `xmltv` 已实现解析和直播页，但收藏频道、EPG 多源匹配还没做。
 - 源启用状态可以本地覆盖，但还不能添加/删除源（增删仍在 Git 仓库）。
-- 首页继续观看/热门/剧集仍是 mock。
-- 没有下载、弹幕、超分、投屏、记忆进度。
-- iOS 未接入；将来 iOS 上 FLV 需要服务端转 HLS 或放弃。
+- 首页继续观看已接本地进度，热门/剧集仍是 mock。
+- 没有下载、弹幕、超分、投屏。
+- iOS 已能构建 simulator，但未做真机签名和上架。
 - 内容聚合类 App 上架仍有版权风险，去掉远程代码只降低技术/审核风险，不消除内容风险。
 
 ## 8. 下一步优先级
 
 1. 在 `libretv-rules/sources/vod.json` 填入真实源并 `enabled: true`。
-2. `npm run validate` + `npm run build`，确认 App 能搜到结果。
-3. 生成 Ed25519 密钥、`npm run sign`、打 tag `v2`、推 GitHub。
-4. App 用 `RULEPACK_URL` + `RULEPACK_PUBLIC_KEY` 跑远程规则包。
-5. 直播 M3U / XMLTV 接入。
-6. 加 Android / iOS platform。
-7. 加 Android TV 布局与遥控器焦点。
-8. 首页推荐数据接规则包或豆瓣/Bangumi。
-9. 最后再考虑下载、弹幕、超分。
+2. 直播收藏频道、EPG 多源匹配。
+3. 安装 Android SDK，验证 `flutter build apk` 和 Android TV。
+4. TV 10-foot UI 深度适配（焦点顺序、遥控器按键）。
+5. 设置页、搜索源健康度、首页真实推荐。
+6. 把 `libretv_app` 推到 GitHub。
+7. 播放失败自动换源、下载、弹幕、超分（最后再做）。
 
 ## 9. 下次继续时先看
 
