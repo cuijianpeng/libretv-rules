@@ -380,8 +380,18 @@ App 本地仓库：
 - 加密 HLS（AES-128）与直播流明确提示暂不支持
 - 下载中显示进度和分片信息
 
+
+### HLS 广告过滤
+
+- App 内本机 HLS 代理，点播 m3u8 自动走代理
+- 过滤 `#EXT-X-CUE-OUT` / `#EXT-X-CUE-IN` 广告区间
+- 过滤 URL 中带 ad/ads/preroll/midroll 等标记的分片
+- 重写分片、AES key、EXT-X-MAP、master 子播放列表
+- Range 透传，拖动进度仍然可用
+- iOS 增加 NSAllowsLocalNetworking
+
 ### 验证更新
 
-- `flutter test` 34 个测试通过
+- `flutter test` 37 个测试通过
 - `flutter build macos --debug` 成功
 - `flutter build ios --simulator --debug` 成功
