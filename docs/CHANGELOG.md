@@ -326,8 +326,14 @@ App 本地仓库：
 - 省级卫视当前大面积超时/地区限制，未纳入精选列表
 - manifest `v12` 签名并打 tag
 
+### 画质探测
+
+- `QualityProbeService` 解析 m3u8 master playlist 的 `RESOLUTION`
+- 详情弹层显示最高画质，如 `1080P`
+- 非 master playlist 自动隐藏
+
 ### 验证更新
 
-- `flutter test` 25 个测试通过
+- `flutter test` 29 个测试通过
 - `flutter build macos --debug` 成功
 - `flutter build ios --simulator --debug` 成功
