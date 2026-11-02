@@ -371,8 +371,17 @@ App 本地仓库：
 - 自动跳过开启后，进入片头区间会跳到片头结束，到片尾会切下一集/暂停
 - 标记按片名持久化，同一部剧各集共用
 
+
+### 下载本集
+
+- 播放器新增下载按钮（直播隐藏）
+- 直链 MP4：流式写入 `~/Downloads/LibreTV`
+- HLS：自动选择最高码率，下载未加密分片并合并为 `.ts`/`.mp4`
+- 加密 HLS（AES-128）与直播流明确提示暂不支持
+- 下载中显示进度和分片信息
+
 ### 验证更新
 
-- `flutter test` 32 个测试通过
+- `flutter test` 34 个测试通过
 - `flutter build macos --debug` 成功
 - `flutter build ios --simulator --debug` 成功
