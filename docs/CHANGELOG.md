@@ -1,5 +1,42 @@
 # 变更记录
 
+## 2026-11-02（源与规则补充）
+
+### 直播源
+
+`sources/live.json` 升到 version 2，新增并启用：
+
+- `iptv-org-zho` 中文频道（约 226 个）
+- `iptv-org-hk` 香港频道（约 17 个）
+- `iptv-org-tw` 台湾频道（约 33 个）
+- `iptv-org-movies` 电影频道（约 773 个，默认关闭）
+
+`iptv-org-cn` 保留启用，实测约 155 个频道。所有地址均验证返回 200。
+
+### 点播源
+
+- 新增 `open-movies`（启用）：`fixtures/open-movies/cms.json`，Blender 开放电影
+  与 W3C 测试片段，直连 `media.w3.org` 的 MP4，CC BY 授权。
+- 新增 `archive-org`（默认关闭）：搜索 archive.org 公共领域影片。
+  实测本机无法直连 archive.org，需代理，因此默认不启用。
+
+### 新引擎
+
+- `rules/archive-org.json` + App `RuleEngine` 新增 `archive-org`：
+  - `advancedsearch.php` 搜索，`metadata/{id}` 取文件列表；
+  - 按扩展名筛视频，同组多清晰度保留最佳，多文件按集输出；
+  - `request.*.timeoutSeconds` 支持按规则覆盖超时；
+  - 测试：`test/rule_engine_test.dart` 新增 3 个用例。
+
+### 其他
+
+- `demo-fixture` 地址从 `@main` 改为固定 `@v4`，避免分支漂移。
+- `schemas/rule.schema.json`、`scripts/validate.mjs` 加入 `archive-org`。
+- `manifest.json` version 5 并签名；App 内置基线同步。
+- 实测：`archive.org`、`commons.wikimedia.org` 本机连接超时；
+  `media.w3.org`、`download.blender.org`、`iptv-org.github.io` 可直连。
+- iptv-org 已不再托管公共 EPG 地址，`xmltv` 规则仍无可用源。
+
 ## 2026-11-02
 
 ### 项目分析

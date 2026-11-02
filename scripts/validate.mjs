@@ -14,6 +14,7 @@ const ALLOWED_ENGINES = new Set([
   'cms-json',
   'http-json',
   'html-regex',
+  'archive-org',
   'm3u',
   'xmltv',
   'direct',

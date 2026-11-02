@@ -1,17 +1,37 @@
 {
   "$schema": "../schemas/sources-vod.schema.json",
-  "version": 1,
+  "version": 2,
   "updatedAt": "2026-11-02",
   "sources": [
     {
       "id": "demo-fixture",
       "name": "LibreTV 演示源（公开测试）",
       "type": "cms",
-      "url": "https://cdn.jsdelivr.net/gh/cuijianpeng/libretv-rules@main/fixtures/demo/cms.json",
+      "url": "https://cdn.jsdelivr.net/gh/cuijianpeng/libretv-rules@v4/fixtures/demo/cms.json",
       "rule": "cms-standard",
       "enabled": true,
       "tags": ["演示", "测试"],
-      "note": "静态 JSON 测试源，仅用于验证搜索/详情/播放链路，不包含第三方内容。"
+      "note": "静态 JSON 测试源，仅用于验证搜索/详情/播放链路，不包含第三方内容。固定在 v4 tag，避免分支漂移。"
+    },
+    {
+      "id": "open-movies",
+      "name": "公开版权影片（Blender / W3C）",
+      "type": "cms",
+      "url": "https://cdn.jsdelivr.net/gh/cuijianpeng/libretv-rules@v5/fixtures/open-movies/cms.json",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": ["公开版权", "动画", "短片"],
+      "note": "CC BY 授权的 Blender 开放电影与 W3C 测试片段，直连可播。静态目录，搜索会返回全部条目。"
+    },
+    {
+      "id": "archive-org",
+      "name": "Internet Archive 公共领域影片",
+      "type": "custom",
+      "url": "https://archive.org",
+      "rule": "archive-org",
+      "enabled": false,
+      "tags": ["公开领域", "电影", "纪录片"],
+      "note": "按关键词搜索 archive.org 的公共领域影片。大陆网络通常无法直连（连接超时），需要代理；默认关闭。"
     },
     {
       "id": "example-cms",

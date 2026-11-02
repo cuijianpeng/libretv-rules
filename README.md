@@ -31,6 +31,7 @@ libretv-rules/
 │  ├─ cms-standard.json # 标准 Apple CMS
 │  ├─ http-json.json    # 通用 JSON 接口
 │  ├─ html-regex.json   # 详情页正则
+│  ├─ archive-org.json  # Internet Archive 公共领域影片
 │  ├─ m3u.json          # M3U 直播列表
 │  ├─ xmltv.json        # XMLTV 节目单
 │  └─ direct.json       # 直链播放
@@ -138,12 +139,13 @@ Node 20+，无第三方依赖。
 | `cms-json` | 标准 Apple CMS `ac=videolist` | search / detail |
 | `http-json` | 通用 JSON 接口 + JSONPath 映射 | search / detail |
 | `html-regex` | 从详情页 HTML 提取 m3u8 | detail |
+| `archive-org` | Internet Archive 公共领域影片 | search / detail |
 | `m3u` | M3U/M3U8 直播列表 | live |
 | `xmltv` | XMLTV 节目单 | epg |
 | `direct` | 直链播放 | play |
 
-> 当前 Flutter 客户端已实现 `cms-json`、`http-json`、`html-regex`、`direct` 的
-> 搜索/详情；`m3u`、`xmltv` 等直播模块接入后再启用。
+> 当前 Flutter 客户端已实现 `cms-json`、`http-json`、`html-regex`、`archive-org`、
+> `direct` 的搜索/详情；`m3u`、`xmltv` 等直播模块接入后再启用。
 
 ### 允许的占位符
 

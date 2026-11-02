@@ -130,6 +130,7 @@ assets/rulepack/
 | `cms-json` | ✅ | ✅ | 标准 Apple CMS，含详情页 HTML 兜底 |
 | `http-json` | ✅ | ✅ | JSONPath 子集映射 |
 | `html-regex` | — | ✅ | 详情页正则提取 m3u8 |
+| `archive-org` | ✅ | ✅ | archive.org 公共领域影片，按文件列表挑视频 |
 | `direct` | — | ✅ | 直链 |
 | `m3u` | 待直播模块 | 待直播模块 | 频道列表 |
 | `xmltv` | 待直播模块 | 待直播模块 | 节目单 |

@@ -62,9 +62,12 @@
 - GitHub：https://github.com/cuijianpeng/libretv-rules
 - 分支：`main`
 - 初始 commit：`7b7eb99 init: source catalog and parser rules`
-- 6 条规则、3 个点播源（其中 1 个是启用的公开演示源）、2 个直播源（其中 1 个是 iptv-org 公开测试源）
-- 演示源 `demo-fixture` 数据在 `fixtures/demo/cms.json`，播放地址是公开测试流
-- `manifest.json` 已签名（version 4），tag `v4`
+- 7 条规则、5 个点播源（2 个启用）、6 个直播源（4 个启用）
+- 启用点播源：`demo-fixture`（公开演示）和 `open-movies`（Blender/W3C 公开版权影片）
+- 启用直播源：iptv-org 中国、中文、香港、台湾 4 个公开 M3U 索引
+- `archive-org` 源默认关闭：大陆网络通常无法直连 archive.org
+- 演示源 `demo-fixture` 数据在 `fixtures/demo/cms.json`，`open-movies` 数据在 `fixtures/open-movies/cms.json`
+- `manifest.json` 已签名（version 5），tag `v5`
 - 另外 2 个点播源和 1 个直播源仍是 `example.com` 占位，`enabled: false`
 
 ## 4. 架构
@@ -123,11 +126,12 @@
 - 首页继续观看已接本地进度，热门/剧集仍是 mock。
 - 没有下载、弹幕、超分、投屏。
 - iOS 已能构建 simulator，但未做真机签名和上架。
+- `archive-org` 源依赖 archive.org，大陆网络通常无法直连，需要代理。
 - 内容聚合类 App 上架仍有版权风险，去掉远程代码只降低技术/审核风险，不消除内容风险。
 
 ## 8. 下一步优先级
 
-1. 在 `libretv-rules/sources/vod.json` 填入真实源并 `enabled: true`。
+1. 补真实采集站（`open-movies` 只是公开版权目录，不是完整片库）。
 2. 直播收藏频道、EPG 多源匹配。
 3. 安装 Android SDK，验证 `flutter build apk` 和 Android TV。
 4. TV 10-foot UI 深度适配（焦点顺序、遥控器按键）。

@@ -1,0 +1,54 @@
+{
+  "code": 1,
+  "msg": "LibreTV open movie fixture",
+  "page": 1,
+  "pagecount": 1,
+  "limit": "20",
+  "total": 4,
+  "list": [
+    {
+      "vod_id": 101,
+      "vod_name": "Sintel 预告片",
+      "vod_pic": "https://picsum.photos/seed/libretv-sintel/600/900",
+      "type_name": "动画",
+      "vod_year": "2010",
+      "vod_area": "荷兰",
+      "vod_remarks": "CC BY 3.0",
+      "vod_content": "Blender Foundation 开放电影《Sintel》预告片，CC BY 3.0 授权，素材来自 W3C HTML5 测试媒体。",
+      "vod_play_url": "正片$https://media.w3.org/2010/05/sintel/trailer.mp4"
+    },
+    {
+      "vod_id": 102,
+      "vod_name": "大雄兔 预告片",
+      "vod_pic": "https://picsum.photos/seed/libretv-bunny-trailer/600/900",
+      "type_name": "动画",
+      "vod_year": "2008",
+      "vod_area": "荷兰",
+      "vod_remarks": "CC BY 3.0",
+      "vod_content": "Blender Foundation 开放电影《Big Buck Bunny》预告片，CC BY 3.0 授权，素材来自 W3C HTML5 测试媒体。",
+      "vod_play_url": "正片$https://media.w3.org/2010/05/bunny/trailer.mp4"
+    },
+    {
+      "vod_id": 103,
+      "vod_name": "大雄兔 正片",
+      "vod_pic": "https://picsum.photos/seed/libretv-bunny-movie/600/900",
+      "type_name": "动画",
+      "vod_year": "2008",
+      "vod_area": "荷兰",
+      "vod_remarks": "CC BY 3.0",
+      "vod_content": "Blender Foundation 开放电影《Big Buck Bunny》正片，CC BY 3.0 授权，素材来自 W3C HTML5 测试媒体。",
+      "vod_play_url": "正片$https://media.w3.org/2010/05/bunny/movie.mp4"
+    },
+    {
+      "vod_id": 104,
+      "vod_name": "W3C 测试短片",
+      "vod_pic": "https://picsum.photos/seed/libretv-w3c/600/900",
+      "type_name": "短片",
+      "vod_year": "2010",
+      "vod_area": "网络",
+      "vod_remarks": "测试素材",
+      "vod_content": "W3C HTML5 视频测试片段，用于验证 MP4 直链播放和进度条。",
+      "vod_play_url": "正片$https://media.w3.org/2010/05/video/movie_300.mp4"
+    }
+  ]
+}

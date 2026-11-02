@@ -18,7 +18,15 @@
       "minimum": 1
     },
     "engine": {
-      "enum": ["cms-json", "http-json", "html-regex", "m3u", "xmltv", "direct"]
+      "enum": [
+        "cms-json",
+        "http-json",
+        "html-regex",
+        "archive-org",
+        "m3u",
+        "xmltv",
+        "direct"
+      ]
     },
     "capabilities": {
       "type": "array",

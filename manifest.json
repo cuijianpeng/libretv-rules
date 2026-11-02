@@ -1,10 +1,14 @@
 {
   "schemaVersion": 1,
   "id": "libretv-rules",
-  "version": 4,
+  "version": 5,
   "minAppVersion": "0.1.0",
-  "publishedAt": "2026-11-02T09:08:31.837Z",
+  "publishedAt": "2026-11-02T09:39:08.037Z",
   "files": [
+    {
+      "path": "rules/archive-org.json",
+      "sha256": "b642fd1f5b633c73f0694a9d94baffbe19600ca4e5840e48464c9498fc362c8d"
+    },
     {
       "path": "rules/cms-standard.json",
       "sha256": "86c0db8b740f7c28c1e4cefe7b66c231afb796b2d3b2db3b2c57bb57a7c8c36c"
@@ -31,12 +35,12 @@
     },
     {
       "path": "sources/live.json",
-      "sha256": "5bdbfbbff206f35b3970440aa497d152937c256da9d47e356fc989f472b7c03f"
+      "sha256": "9a627482b2bb5e3b6bee493ffaba8136c01b89b3320279cce7c4f872f716bd35"
     },
     {
       "path": "sources/vod.json",
-      "sha256": "88eb7e9c4ee5ca4242b7edaec6cc02e1a65fd2eea2eedfb6fd49988f386e36bc"
+      "sha256": "f62cb3ae2e41b46f95b15c4c8923d67e6200c318828e8c3cd063599e16cae8e2"
     }
   ],
-  "signature": "r/OIRQfAHfBAOCY7x+X+3QYqW7Hi3OJpw4zld3BCSNwxElyt7bJrD4ONXz+aETT2jYFwU7hPpP8vRm41Rf1mBA=="
+  "signature": "8Y0LlSf3XB1IrIBCC9x3KYxZej0ZPimxVQ5it/KCYM510jC7Z/8QDYa+QAyvlgGx1+KdSM19H26cEgPnd2qqAA=="
 }

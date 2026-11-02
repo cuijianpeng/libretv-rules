@@ -1,6 +1,6 @@
 {
   "$schema": "../schemas/sources-live.schema.json",
-  "version": 1,
+  "version": 2,
   "updatedAt": "2026-11-02",
   "sources": [
     {
@@ -9,8 +9,44 @@
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
       "rule": "m3u",
       "enabled": true,
-      "tags": ["公开测试", "IPTV"],
-      "note": "iptv-org 社区公开索引，仅用于测试；频道可用性由上游决定。"
+      "tags": ["公开测试", "IPTV", "中国"],
+      "note": "iptv-org 社区公开索引，约 155 个频道；频道可用性由上游决定。"
+    },
+    {
+      "id": "iptv-org-zho",
+      "name": "iptv-org 中文频道",
+      "url": "https://iptv-org.github.io/iptv/languages/zho.m3u",
+      "rule": "m3u",
+      "enabled": true,
+      "tags": ["公开测试", "IPTV", "中文"],
+      "note": "按语言聚合的中文频道，约 226 个，含大陆、港台及海外华语台。"
+    },
+    {
+      "id": "iptv-org-hk",
+      "name": "iptv-org 香港频道",
+      "url": "https://iptv-org.github.io/iptv/countries/hk.m3u",
+      "rule": "m3u",
+      "enabled": true,
+      "tags": ["公开测试", "IPTV", "香港"],
+      "note": "约 17 个频道，部分频道仅限香港地区。"
+    },
+    {
+      "id": "iptv-org-tw",
+      "name": "iptv-org 台湾频道",
+      "url": "https://iptv-org.github.io/iptv/countries/tw.m3u",
+      "rule": "m3u",
+      "enabled": true,
+      "tags": ["公开测试", "IPTV", "台湾"],
+      "note": "约 33 个频道，部分频道有地区限制。"
+    },
+    {
+      "id": "iptv-org-movies",
+      "name": "iptv-org 电影频道",
+      "url": "https://iptv-org.github.io/iptv/categories/movies.m3u",
+      "rule": "m3u",
+      "enabled": false,
+      "tags": ["公开测试", "IPTV", "电影"],
+      "note": "约 773 个电影类频道，数量大、失效多，默认关闭，按需在源管理里开启。"
     },
     {
       "id": "example-live",
