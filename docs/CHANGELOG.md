@@ -398,8 +398,16 @@ App 本地仓库：
 - 点击后依次尝试其它来源，解析成功直接替换播放器
 - 没有更多来源时提示，不影响「重试」
 
+
+### 下载管理
+
+- 设置页新增「下载管理」
+- 记录下载标题、路径、大小
+- 在 Finder 中显示、删除文件
+- 下载完成后自动写入记录
+
 ### 验证更新
 
-- `flutter test` 37 个测试通过
+- `flutter test` 38 个测试通过
 - `flutter build macos --debug` 成功
 - `flutter build ios --simulator --debug` 成功
