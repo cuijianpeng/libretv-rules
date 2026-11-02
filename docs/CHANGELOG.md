@@ -293,8 +293,17 @@ App 本地仓库：
 - manifest 连续签名 v8 / v9 / v10；App 默认地址跟到 v10
 - 实测：公开版权源 5/5 播放地址可连，演示源 3 集可连
 
+### 源订阅 / TVBOX 导入
+
+- `SubscriptionService`：LibreTV-SourceList、TVBOX 配置、接口目录三种格式
+- TVBOX：忽略 `type:3` Spider、`searchable:0`、非 M3U 直播
+- `LocalSourcesStore`：导入结果存本地，叠加到规则包源
+- 设置页：导入订阅 URL、显示本地源数量、清空本地源
+- 搜索 / 直播 / 源管理共用本地源
+- 单元测试覆盖三种订阅格式
+
 ### 验证更新
 
-- `flutter test` 19 个测试通过
+- `flutter test` 23 个测试通过
 - `flutter build macos --debug` 成功
 - `flutter build ios --simulator --debug` 成功
