@@ -4,6 +4,16 @@
   "updatedAt": "2026-11-02",
   "sources": [
     {
+      "id": "demo-fixture",
+      "name": "LibreTV 演示源（公开测试）",
+      "type": "cms",
+      "url": "https://cdn.jsdelivr.net/gh/cuijianpeng/libretv-rules@main/fixtures/demo/cms.json",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": ["演示", "测试"],
+      "note": "静态 JSON 测试源，仅用于验证搜索/详情/播放链路，不包含第三方内容。"
+    },
+    {
       "id": "example-cms",
       "name": "示例采集站",
       "type": "cms",
