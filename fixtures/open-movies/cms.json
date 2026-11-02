@@ -4,7 +4,7 @@
   "page": 1,
   "pagecount": 1,
   "limit": "20",
-  "total": 4,
+  "total": 5,
   "list": [
     {
       "vod_id": 101,
@@ -14,8 +14,8 @@
       "vod_year": "2010",
       "vod_area": "荷兰",
       "vod_remarks": "CC BY 3.0",
-      "vod_content": "Blender Foundation 开放电影《Sintel》预告片，CC BY 3.0 授权，素材来自 W3C HTML5 测试媒体。",
-      "vod_play_url": "正片$https://media.w3.org/2010/05/sintel/trailer.mp4"
+      "vod_content": "Blender Foundation 开放电影《Sintel》720p 预告片，CC BY 3.0 授权。",
+      "vod_play_url": "正片$https://download.blender.org/durian/trailer/sintel_trailer-720p.mp4"
     },
     {
       "vod_id": 102,
@@ -25,30 +25,41 @@
       "vod_year": "2008",
       "vod_area": "荷兰",
       "vod_remarks": "CC BY 3.0",
-      "vod_content": "Blender Foundation 开放电影《Big Buck Bunny》预告片，CC BY 3.0 授权，素材来自 W3C HTML5 测试媒体。",
-      "vod_play_url": "正片$https://media.w3.org/2010/05/bunny/trailer.mp4"
+      "vod_content": "Blender Foundation 开放电影《Big Buck Bunny》480p 预告片，CC BY 3.0 授权。",
+      "vod_play_url": "正片$https://download.blender.org/peach/trailer/trailer_480p.mov"
     },
     {
       "vod_id": 103,
-      "vod_name": "大雄兔 正片",
-      "vod_pic": "https://picsum.photos/seed/libretv-bunny-movie/600/900",
-      "type_name": "动画",
-      "vod_year": "2008",
+      "vod_name": "钢之泪 正片",
+      "vod_pic": "https://picsum.photos/seed/libretv-tos/600/900",
+      "type_name": "科幻",
+      "vod_year": "2012",
       "vod_area": "荷兰",
       "vod_remarks": "CC BY 3.0",
-      "vod_content": "Blender Foundation 开放电影《Big Buck Bunny》正片，CC BY 3.0 授权，素材来自 W3C HTML5 测试媒体。",
-      "vod_play_url": "正片$https://media.w3.org/2010/05/bunny/movie.mp4"
+      "vod_content": "Blender Foundation 开放电影《Tears of Steel》720p 正片，CC BY 3.0 授权。",
+      "vod_play_url": "正片$https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov"
     },
     {
       "vod_id": 104,
-      "vod_name": "W3C 测试短片",
-      "vod_pic": "https://picsum.photos/seed/libretv-w3c/600/900",
+      "vod_name": "大象之梦 正片",
+      "vod_pic": "https://picsum.photos/seed/libretv-ed/600/900",
+      "type_name": "动画",
+      "vod_year": "2006",
+      "vod_area": "荷兰",
+      "vod_remarks": "CC BY 2.5",
+      "vod_content": "Blender Foundation 第一部开放电影《Elephants Dream》1024 版正片。",
+      "vod_play_url": "正片$https://download.blender.org/ED/ED_1024.avi"
+    },
+    {
+      "vod_id": 105,
+      "vod_name": "CC0 花朵",
+      "vod_pic": "https://picsum.photos/seed/libretv-flower/600/900",
       "type_name": "短片",
-      "vod_year": "2010",
+      "vod_year": "2018",
       "vod_area": "网络",
-      "vod_remarks": "测试素材",
-      "vod_content": "W3C HTML5 视频测试片段，用于验证 MP4 直链播放和进度条。",
-      "vod_play_url": "正片$https://media.w3.org/2010/05/video/movie_300.mp4"
+      "vod_remarks": "CC0",
+      "vod_content": "MDN 示例视频，CC0 公共领域，用于验证短 MP4 播放。",
+      "vod_play_url": "正片$https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
     }
   ]
 }

@@ -277,6 +277,14 @@ App 本地仓库：
 - 规则包 `v6` 重新签名并打 tag
 - App 默认远程地址切到 v6
 
+### v7 公开版权源播放修复
+
+- `media.w3.org` 对 App 的 Chrome UA 返回 Cloudflare 403，`open-movies` 实际无法播放
+- 片源换成 `download.blender.org`（Sintel / Big Buck Bunny / Tears of Steel / Elephants Dream）
+  和 MDN CC0 短片，全部实测支持 Range 请求
+- 静态目录详情按 `vod_id` 匹配，避免多条目 fixture 总返回第一条
+- 规则包 `v7` 重新签名并打 tag
+
 ### 验证更新
 
 - `flutter test` 19 个测试通过

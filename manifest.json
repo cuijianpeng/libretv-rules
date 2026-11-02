@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "libretv-rules",
-  "version": 6,
+  "version": 7,
   "minAppVersion": "0.1.0",
-  "publishedAt": "2026-11-02T09:51:18.152Z",
+  "publishedAt": "2026-11-02T10:07:15.953Z",
   "files": [
     {
       "path": "rules/archive-org.json",
@@ -39,8 +39,8 @@
     },
     {
       "path": "sources/vod.json",
-      "sha256": "66d211eed875c852031f5cf7035effac14299c968dd765676e0f809202c85a79"
+      "sha256": "ec854685bd55c1f2e0ba3e4232a0decf68f3e590a82524dfe4c6f9b120f314bc"
     }
   ],
-  "signature": "PF9u3qPLJkdK/wT56cdNdgYaoD6INldeeJt+rQvE8V1TISsF2Q9IPW8E/pu/vasaxaQinoUUPOPbWlHzXtNwBA=="
+  "signature": "sQ0GE4JW4wI5fj+1JgXjil/KYvRHMWxPktdJLMsOEpUOJnf9ccLzrVRlKRwZdFHUHo/bzRy5dLXm90SwfMxnBg=="
 }
