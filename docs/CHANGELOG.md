@@ -413,8 +413,17 @@ App 本地仓库：
 - 首页搜索框去掉 460px 限制，占满剩余空间
 - 搜索页搜索框与「搜索」按钮统一 46px 高度
 
+
+### 亮/暗主题 + 缓存管理
+
+- `AppColors` 改为可切换调色板
+- 设置页新增「亮色主题」开关，选择持久化
+- 浅色主题使用独立的背景/面板/文字/描边色
+- 设置页新增图片缓存管理：显示缓存数量、一键清理
+- 清理同时清空 Flutter 图片缓存
+
 ### 验证更新
 
-- `flutter test` 38 个测试通过
+- `flutter test` 39 个测试通过
 - `flutter build macos --debug` 成功
 - `flutter build ios --simulator --debug` 成功
