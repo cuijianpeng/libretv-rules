@@ -1,0 +1,139 @@
+# LibreTV 项目总览
+
+> 最后更新：2026-11-02
+> 规则仓库：https://github.com/cuijianpeng/libretv-rules
+
+## 1. 项目组成
+
+| 目录 | 作用 | Git |
+|---|---|---|
+| `LibreTV/` | 原有 Next.js Web 版（服务端 API + Web 前端） | 原项目 |
+| `libretv_app/` | Flutter 客户端，当前只启用 macOS | **尚未建 Git 仓库** |
+| `libretv-rules/` | 源目录 + 解析规则 + 签名发布 | ✅ GitHub `cuijianpeng/libretv-rules` |
+
+工作区根目录：
+
+```
+/Users/cuijianpeng/Desktop/LibreTV
+```
+
+## 2. 目标与非目标
+
+### 目标
+
+- Android / iOS / Android TV 一套 Flutter 代码（Apple TV 暂不做）。
+- 先做 macOS 客户端，用来快速验证 media-first 设计系统和播放器。
+- 源和解析规则不写死在 App 里，从 Git 仓库动态下发。
+- 只下发 **JSON 数据**，不执行远程 JS/JAR。
+- 不需要自建服务端；规则包放 GitHub，App 直接拉。
+- 开源、非商业。
+
+### 非目标（当前阶段）
+
+- 用户账号、注册、计费。
+- 远程 JS/JAR 插件。
+- Apple TV / tvOS。
+- 自建搜索服务端。
+- 弹幕、超分、投屏、SyncPlay、下载（以后可选）。
+
+## 3. 当前状态
+
+### Flutter App
+
+- 平台：macOS
+- 设计：media-first 暗色设计系统
+- 首页：左侧导航 + Hero + 横向媒体轨道
+- 详情：居中 Dialog + 选集
+- 播放器：`media_kit` + `media_kit_video`，HLS 演示流
+- 规则包：加载、验签、SHA256、内置回退
+- 搜索：规则包驱动，多源并发
+- 源管理：只读展示规则包里的源和规则
+- 首页推荐数据仍是 mock，搜索页是真实链路
+
+### 规则仓库
+
+- GitHub：https://github.com/cuijianpeng/libretv-rules
+- 分支：`main`
+- 初始 commit：`7b7eb99 init: source catalog and parser rules`
+- 6 条规则、2 个点播占位源、1 个直播占位源
+- `manifest.json` 已生成，**尚未签名**
+- 占位源全部 `enabled: false`，避免误用 `example.com`
+
+## 4. 架构
+
+```
+┌────────────────────────────────────────────┐
+│ Flutter App（macOS / 后续 Android/iOS/TV）  │
+│  ├─ design/        media-first 设计系统     │
+│  ├─ player/        media_kit 播放器         │
+│  ├─ features/      首页/搜索/源管理         │
+│  └─ data/          rulepack 加载 + 规则引擎 │
+└───────────────┬────────────────────────────┘
+                │ 拉取 manifest + JSON
+                ▼
+┌────────────────────────────────────────────┐
+│ libretv-rules（GitHub / jsDelivr）          │
+│  ├─ manifest.json  版本 + hash + 签名       │
+│  ├─ sources/       点播源 / 直播源          │
+│  └─ rules/         纯 JSON 解析规则         │
+└───────────────┬────────────────────────────┘
+                │ 直接请求
+                ▼
+        采集站 / JSON API / M3U / XMLTV
+```
+
+## 5. 关键技术选型
+
+| 层 | 选择 | 原因 |
+|---|---|---|
+| 客户端 | Flutter | 一套代码覆盖 Android/iOS/Android TV，TV 焦点系统成熟 |
+| 首端 | macOS | 构建快、调试快，适合先验证设计 |
+| 播放 | media_kit + libmpv | 格式支持广，和 Kazumi 同源 |
+| 状态 | 原生 StatefulWidget + ValueNotifier | 当前规模够用，暂不引入 MobX |
+| 规则 | JSON + 内置引擎 | 商店合规、安全、可动态更新 |
+| 签名 | Ed25519 + canonical JSON | 防篡改，App 内置公钥 |
+| 分发 | GitHub + jsDelivr | 零服务端、固定 tag 可缓存 |
+| 设计 | 自研 media-first | M3 只作为基础，不直接套组件 |
+
+## 6. 关键决策
+
+1. **不做 Apple TV**：减少 tvOS 审核和 AVPlayer 限制。
+2. **不做远程 JS/JAR**：App Store 合规 + 安全。
+3. **源和规则独立仓库**：改规则不用发版。
+4. **Mac 优先**：先验证视觉和播放器，再做移动端和 TV。
+5. **首页先用 mock**：搜索/规则链路先打通，推荐数据后接。
+6. **不整体搬运 Kazumi 播放器**：它和 MobX/Modular/Hive/弹幕/超分耦合太深，只参考交互并复用 media_kit。
+7. **window_manager 固定 0.5.1**：0.6.0 改成了 nativeapi 新 API。
+8. **规则包只允许 JSON**：复杂源需要发版加内置引擎，或以后加可选服务端。
+
+## 7. 已知限制
+
+- `libretv_app` 还没建 Git 仓库，只在本机。
+- `manifest.json` 未签名；远程加载未配置公钥时会跳过验签（仅开发用）。
+- 规则包里的占位源不可用，搜索页需要先填真实源。
+- `m3u` / `xmltv` 引擎尚未在 App 实现，直播页未接。
+- 源启用状态还不能在 App 内修改，只读规则包。
+- 首页继续观看/热门/剧集仍是 mock。
+- 没有下载、弹幕、超分、投屏、记忆进度。
+- iOS 未接入；将来 iOS 上 FLV 需要服务端转 HLS 或放弃。
+- 内容聚合类 App 上架仍有版权风险，去掉远程代码只降低技术/审核风险，不消除内容风险。
+
+## 8. 下一步优先级
+
+1. 在 `libretv-rules/sources/vod.json` 填入真实源并 `enabled: true`。
+2. `npm run validate` + `npm run build`，确认 App 能搜到结果。
+3. 生成 Ed25519 密钥、`npm run sign`、打 tag `v2`、推 GitHub。
+4. App 用 `RULEPACK_URL` + `RULEPACK_PUBLIC_KEY` 跑远程规则包。
+5. 源启用状态本地持久化。
+6. 直播 M3U / XMLTV 接入。
+7. 加 Android / iOS platform。
+8. 加 Android TV 布局与遥控器焦点。
+9. 首页推荐数据接规则包或豆瓣/Bangumi。
+10. 最后再考虑下载、弹幕、超分。
+
+## 9. 下次继续时先看
+
+- `docs/OPERATIONS.md`：命令、签名、Git、排错
+- `docs/APP_INTEGRATION.md`：规则包协议和 App 加载流程
+- `docs/DESIGN_AND_PLAYER.md`：设计系统和播放器
+- `docs/CHANGELOG.md`：这次做了什么

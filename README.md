@@ -11,6 +11,14 @@ App 不再把源和解析逻辑写死，而是从这个仓库拉取一个**签�
 
 **只允许 JSON，不允许远程 JS/JAR。** 这是保证 App Store 合规和客户端安全的前提。
 
+## 文档
+
+- [项目总览](docs/PROJECT.md)：目标、当前状态、架构、决策、限制、路线
+- [操作手册](docs/OPERATIONS.md)：环境、命令、发布、Git、排错
+- [App 集成](docs/APP_INTEGRATION.md)：manifest、验签、加载器、规则引擎
+- [设计系统与播放器](docs/DESIGN_AND_PLAYER.md)：media-first、media_kit、Kazumi 参考
+- [变更记录](docs/CHANGELOG.md)：这次做了什么
+
 ## 目录
 
 ```
