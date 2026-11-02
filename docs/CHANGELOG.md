@@ -342,6 +342,16 @@ App 本地仓库：
   - `epg.pw` 可下载但单文件 40–80 万字节、耗时 60s+，频道 ID 与 iptv-org 的 `tvg-id` 不匹配
 - manifest `v13` 签名并打 tag
 
+
+### 首页 / 图片 / 直播播放修复
+
+- 首页去掉 mock 回退：豆瓣失败时显示重试卡片，不再展示「群星之后」等测试片单
+- Hero 改为豆瓣第一条真实数据；继续观看为空时不显示假进度
+- 新增 `SmartImage`：http 拉取字节 + Referer/UA + 内存缓存，修复豆瓣海报不显示
+- 静态 fixture 源（demo/open-movies）按关键词过滤，避免搜任何词都返回演示数据
+- 直播播放不再传 `start`，修复 mpv `--force-seekable=yes` 报错
+- 播放错误提示中文化，保留重试按钮
+
 ### 验证更新
 
 - `flutter test` 29 个测试通过
