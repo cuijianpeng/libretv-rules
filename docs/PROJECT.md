@@ -48,6 +48,7 @@
 - 规则包：加载、验签、SHA256、内置回退
 - 搜索：规则包驱动，多源并发
 - 源管理：只读展示规则包里的源和规则
+- **公开演示源**：搜索 → 详情 → 3 集 → 播放器，全链路可验证
 - 首页推荐数据仍是 mock，搜索页是真实链路
 
 ### 规则仓库
@@ -55,9 +56,10 @@
 - GitHub：https://github.com/cuijianpeng/libretv-rules
 - 分支：`main`
 - 初始 commit：`7b7eb99 init: source catalog and parser rules`
-- 6 条规则、2 个点播占位源、1 个直播占位源
-- `manifest.json` 已生成，**尚未签名**
-- 占位源全部 `enabled: false`，避免误用 `example.com`
+- 6 条规则、3 个点播源（其中 1 个是启用的公开演示源）、1 个直播占位源
+- 演示源 `demo-fixture` 数据在 `fixtures/demo/cms.json`，播放地址是公开测试流
+- `manifest.json` 已生成（version 2），**尚未签名**
+- 另外 2 个点播源和 1 个直播源仍是 `example.com` 占位，`enabled: false`
 
 ## 4. 架构
 

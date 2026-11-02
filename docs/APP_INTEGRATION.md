@@ -195,3 +195,13 @@ flutter test
 - Node → Dart 跨语言验签
 - Dart 签名/篡改检测
 - 首页渲染
+
+真实网络链路（演示源）：
+
+```bash
+cd libretv_app
+dart run tool/check_demo.dart
+```
+
+它读取 `libretv-rules` 里的 `demo-fixture` 源，走 jsDelivr + 公开测试 HLS，
+验证「源 → 搜索 → 详情 → 分集」。

@@ -59,8 +59,11 @@ GitHub：https://github.com/cuijianpeng/libretv-rules
 
 内容：
 
-- `sources/vod.json`：2 个占位点播源（disabled）
+- `sources/vod.json`：3 个点播源
+  - `demo-fixture`：公开演示源，启用
+  - 2 个 `example.com` 占位源，禁用
 - `sources/live.json`：1 个占位直播源（disabled）
+- `fixtures/demo/cms.json`：演示搜索/详情数据，播放指向公开测试 HLS
 - `rules/`：6 条规则
   - cms-standard
   - http-json
@@ -71,17 +74,38 @@ GitHub：https://github.com/cuijianpeng/libretv-rules
 - `schemas/`：JSON Schema
 - `fixtures/`：CMS 搜索/详情样例
 - `scripts/`：validate / build-manifest / sign / verify / public-key
-- `manifest.json`：version 1，未签名
+- `manifest.json`：version 2，未签名
 - `.github/workflows/validate.yml`
 - `keys/README.md`
 
 Git：
 
 - 分支 `main`
-- commit `7b7eb99 init: source catalog and parser rules`
-- 29 个文件
+- 最新 commit：`520300a feat: add public demo fixture source`
+- 29 → 30+ 个文件
 - remote：`git@github.com:cuijianpeng/libretv-rules.git`
 - SSH 公钥已添加，push 成功
+
+### 演示源验证
+
+`libretv_app/tool/check_demo.dart` 直接走真实网络：
+
+```bash
+cd libretv_app
+dart run tool/check_demo.dart
+```
+
+输出：
+
+```
+search: 1
+- LibreTV 演示影片 (1)
+detail: LibreTV 演示影片
+episodes: 3
+...
+```
+
+App 搜索页默认选中演示源，可完成搜索 → 详情 → 选集 → 播放。
 
 ### 文档
 

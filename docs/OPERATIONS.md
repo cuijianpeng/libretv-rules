@@ -95,7 +95,35 @@ Node 20+，无第三方依赖。
 }
 ```
 
-## 5. 加一个规则
+## 5. 演示源
+
+仓库内置一个公开测试源 `demo-fixture`：
+
+- 源地址：`https://cdn.jsdelivr.net/gh/cuijianpeng/libretv-rules@main/fixtures/demo/cms.json`
+- 数据：`fixtures/demo/cms.json`
+- 播放：`test-streams.mux.dev` 公开 HLS
+- 用途：验证搜索 → 详情 → 选集 → 播放，不涉及第三方内容
+
+手动验证：
+
+```bash
+cd /Users/cuijianpeng/Desktop/LibreTV/libretv_app
+dart run tool/check_demo.dart
+```
+
+预期输出：
+
+```
+search: 1
+- LibreTV 演示影片 (1)
+detail: LibreTV 演示影片
+episodes: 3
+...
+```
+
+App 里打开搜索页，默认会选中「LibreTV 演示源（公开测试）」，输入任意关键词即可。
+
+## 5.1 加一个规则
 
 在 `rules/` 新建 JSON。最小示例：
 
