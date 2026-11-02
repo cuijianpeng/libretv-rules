@@ -422,8 +422,17 @@ App 本地仓库：
 - 设置页新增图片缓存管理：显示缓存数量、一键清理
 - 清理同时清空 Flutter 图片缓存
 
+
+### 主题 / 缓存 / 字幕 / 加密 HLS / 自动换源
+
+- 亮/暗主题：设置页开关，颜色 token 可切换
+- 图片缓存管理：显示数量、一键清理
+- 外挂字幕：播放器选择 SRT / VTT / ASS / SSA 文件
+- 加密 HLS 下载：AES-128 CBC + PKCS7 解密
+- 播放失败：重试一次后自动切换下一个同名来源
+
 ### 验证更新
 
-- `flutter test` 39 个测试通过
+- `flutter test` 40 个测试通过
 - `flutter build macos --debug` 成功
 - `flutter build ios --simulator --debug` 成功
