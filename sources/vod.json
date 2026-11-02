@@ -7,7 +7,7 @@
       "id": "demo-fixture",
       "name": "LibreTV 演示源（公开测试）",
       "type": "cms",
-      "url": "https://ghproxy.net/https://raw.githubusercontent.com/cuijianpeng/libretv-rules/v4/fixtures/demo/cms.json",
+      "url": "https://ghproxy.net/https://raw.githubusercontent.com/cuijianpeng/libretv-rules/v9/fixtures/demo/cms.json",
       "rule": "cms-standard",
       "enabled": true,
       "tags": ["演示", "测试"],
