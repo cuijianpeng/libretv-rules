@@ -70,7 +70,7 @@
 - `archive-org` 源默认关闭：大陆网络通常无法直连 archive.org
 - `stable-cn` 数据在 `fixtures/live/stable-cn.m3u`，是从 iptv-org 中国列表实测筛出的 19 个频道
 - 演示源 `demo-fixture` 数据在 `fixtures/demo/cms.json`，`open-movies` 数据在 `fixtures/open-movies/cms.json`
-- `manifest.json` 已签名（version 11），tag `v11`
+- `manifest.json` 已签名（version 12），tag `v12`
 - 演示/公开版权 fixture 与 manifest 走 `ghproxy.net` 镜像访问 raw.githubusercontent 固定 tag
 - 本机实测 raw.githubusercontent 大面积超时，故默认改用镜像；jsDelivr（fastly/gcore）可作备用
 - 演示 HLS 已从 `test-streams.mux.dev` 换到 Apple `devstreaming-cdn` 公开测试流

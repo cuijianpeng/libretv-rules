@@ -186,7 +186,7 @@ git push origin main --tags
 App 固定 tag 拉取：
 
 ```
-https://ghproxy.net/https://raw.githubusercontent.com/cuijianpeng/libretv-rules/v11/manifest.json
+https://ghproxy.net/https://raw.githubusercontent.com/cuijianpeng/libretv-rules/v12/manifest.json
 ```
 
 jsDelivr（`fastly.jsdelivr.net` / `gcore.jsdelivr.net`）可作备用镜像；
