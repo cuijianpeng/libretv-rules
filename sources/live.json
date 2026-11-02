@@ -4,6 +4,15 @@
   "updatedAt": "2026-11-02",
   "sources": [
     {
+      "id": "iptv-org-cn",
+      "name": "iptv-org 中国频道（公开测试）",
+      "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
+      "rule": "m3u",
+      "enabled": true,
+      "tags": ["公开测试", "IPTV"],
+      "note": "iptv-org 社区公开索引，仅用于测试；频道可用性由上游决定。"
+    },
+    {
       "id": "example-live",
       "name": "示例直播源",
       "url": "https://example.com/list.m3u",
