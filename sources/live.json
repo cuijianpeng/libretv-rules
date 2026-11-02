@@ -49,6 +49,15 @@
       "note": "约 773 个电影类频道，数量大、失效多，默认关闭，按需在源管理里开启。"
     },
     {
+      "id": "stable-cn",
+      "name": "精选央视/卫视（实测可用）",
+      "url": "https://ghproxy.net/https://raw.githubusercontent.com/cuijianpeng/libretv-rules/v11/fixtures/live/stable-cn.m3u",
+      "rule": "m3u",
+      "enabled": true,
+      "tags": ["精选", "IPTV", "央视", "卫视"],
+      "note": "从 iptv-org 中国列表里筛出的 19 个实测可连频道（CCTV 1-17、CGTN、湖南/安徽/西藏卫视）。比整包 155 个频道稳定，但上游失效仍需定期重筛。"
+    },
+    {
       "id": "example-live",
       "name": "示例直播源",
       "url": "https://example.com/list.m3u",

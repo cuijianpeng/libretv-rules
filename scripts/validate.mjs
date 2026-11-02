@@ -15,6 +15,7 @@ const ALLOWED_ENGINES = new Set([
   'http-json',
   'html-regex',
   'archive-org',
+  'nasa',
   'm3u',
   'xmltv',
   'direct',

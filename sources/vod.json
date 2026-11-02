@@ -24,6 +24,16 @@
       "note": "CC BY 授权的 Blender 开放电影与 W3C 测试片段，直连可播。静态目录，搜索会返回全部条目。"
     },
     {
+      "id": "nasa-video",
+      "name": "NASA 公开视频库",
+      "type": "custom",
+      "url": "https://images-api.nasa.gov",
+      "rule": "nasa-video",
+      "enabled": true,
+      "tags": ["公开领域", "纪录片", "航天"],
+      "note": "NASA 官方公开视频库，可搜索航天纪录片和任务素材；MP4 直链，实测可连。"
+    },
+    {
       "id": "archive-org",
       "name": "Internet Archive 公共领域影片",
       "type": "custom",

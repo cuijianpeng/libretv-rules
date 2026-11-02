@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "libretv-rules",
-  "version": 10,
+  "version": 12,
   "minAppVersion": "0.1.0",
-  "publishedAt": "2026-11-02T10:36:55.014Z",
+  "publishedAt": "2026-11-02T10:57:53.208Z",
   "files": [
     {
       "path": "rules/archive-org.json",
@@ -30,17 +30,21 @@
       "sha256": "2aa790afb9cc2217796377e53d31251a13a687bd35465ec34d77e185a078d7bd"
     },
     {
+      "path": "rules/nasa-video.json",
+      "sha256": "2295360738ae7b442361c64a0b7ba5d520c2a6f8728f3a76b17bc22de2d907dd"
+    },
+    {
       "path": "rules/xmltv.json",
       "sha256": "22e6eba906d1cbc74f9101ad9baef32d0049fd66533889e7817ce9352a84c347"
     },
     {
       "path": "sources/live.json",
-      "sha256": "9a627482b2bb5e3b6bee493ffaba8136c01b89b3320279cce7c4f872f716bd35"
+      "sha256": "a2ab65c119fa431cb084a9aa0cd27bbb1988dd64c1a98d4a9ef497ac3aa1d36a"
     },
     {
       "path": "sources/vod.json",
-      "sha256": "7695b1685b415279e50d47ee700598ee5c571644ebc0baf85f7400906ca0d5ec"
+      "sha256": "e057f799f3c2ad7f35266873b348c52bd1a833494495e62c9af0348719bb78bd"
     }
   ],
-  "signature": "q3YHD0hGrjhjnm9zv2bHc2BEgblivdyfZBLyGJDnsqoJVAIx9QU+E7ZUFh1vNJWcUUeokdANXB5Aiv5Qdx3ZAQ=="
+  "signature": "57Pkmrnn0NsAfM/SI5SypTw3t3g2gXJ4QreCTuDmxQ9hVODS8tvIIxfcRiCKO68gmgJltWPkOD6ZWzSex9pOAA=="
 }

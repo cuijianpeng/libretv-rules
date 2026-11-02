@@ -1,0 +1,42 @@
+{
+  "$schema": "../schemas/rule.schema.json",
+  "id": "nasa-video",
+  "name": "NASA 公开视频库",
+  "version": 1,
+  "engine": "nasa",
+  "capabilities": ["search", "detail"],
+  "request": {
+    "search": {
+      "url": "https://images-api.nasa.gov/search?q={keyword}&media_type=video&page={page}",
+      "method": "GET",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "timeoutSeconds": 20
+    },
+    "detail": {
+      "url": "https://images-api.nasa.gov/asset/{id}",
+      "method": "GET",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "timeoutSeconds": 20
+    }
+  },
+  "extract": {
+    "search": {
+      "list": "$.collection.items",
+      "id": "$.data[0].nasa_id",
+      "name": "$.data[0].title",
+      "year": "$.data[0].date_created",
+      "pic": "$.links[0].href"
+    },
+    "detail": {
+      "files": "$.collection.items",
+      "metadataSuffix": "metadata.json",
+      "titleField": "AVAIL:Title",
+      "descriptionField": "AVAIL:Description"
+    }
+  },
+  "notes": "NASA Image and Video Library 公开 API。搜索用 images-api.nasa.gov/search，详情用 /asset/{id} 取文件列表；优先选 ~mobile.mp4，其次 ~small/~medium。所有素材为 NASA 公共领域内容。"
+}
