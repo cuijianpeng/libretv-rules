@@ -186,10 +186,11 @@ git push origin main --tags
 App 固定 tag 拉取：
 
 ```
-https://raw.githubusercontent.com/cuijianpeng/libretv-rules/v7/manifest.json
+https://ghproxy.net/https://raw.githubusercontent.com/cuijianpeng/libretv-rules/v10/manifest.json
 ```
 
-jsDelivr 可作备用镜像；fixture 源已固定 raw tag，避免 CDN 新 tag 缓存问题。
+jsDelivr（`fastly.jsdelivr.net` / `gcore.jsdelivr.net`）可作备用镜像；
+fixture 源固定 tag，避免 CDN 新 tag 缓存问题。
 
 ### 更新 App 内置基线
 

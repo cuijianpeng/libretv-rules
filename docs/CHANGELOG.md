@@ -285,6 +285,14 @@ App 本地仓库：
 - 静态目录详情按 `vod_id` 匹配，避免多条目 fixture 总返回第一条
 - 规则包 `v7` 重新签名并打 tag
 
+### v8–v10 镜像与演示流可用性修复
+
+- 本机实测 `raw.githubusercontent.com` 连续超时（15–25s），`ghproxy.net` 约 0.5s
+- demo/open-movies fixture 与 manifest 改走 `ghproxy.net` 镜像，仍固定 tag
+- 演示 HLS 从 `test-streams.mux.dev` 换到 Apple `devstreaming-cdn` 公开测试流
+- manifest 连续签名 v8 / v9 / v10；App 默认地址跟到 v10
+- 实测：公开版权源 5/5 播放地址可连，演示源 3 集可连
+
 ### 验证更新
 
 - `flutter test` 19 个测试通过

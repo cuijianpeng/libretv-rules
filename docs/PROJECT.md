@@ -69,8 +69,10 @@
 - 启用直播源：iptv-org 中国、中文、香港、台湾 4 个公开 M3U 索引
 - `archive-org` 源默认关闭：大陆网络通常无法直连 archive.org
 - 演示源 `demo-fixture` 数据在 `fixtures/demo/cms.json`，`open-movies` 数据在 `fixtures/open-movies/cms.json`
-- `manifest.json` 已签名（version 7），tag `v7`
-- 演示/公开版权 fixture 改用 raw.githubusercontent 固定 tag，避免 jsDelivr 偶发超时
+- `manifest.json` 已签名（version 10），tag `v10`
+- 演示/公开版权 fixture 与 manifest 走 `ghproxy.net` 镜像访问 raw.githubusercontent 固定 tag
+- 本机实测 raw.githubusercontent 大面积超时，故默认改用镜像；jsDelivr（fastly/gcore）可作备用
+- 演示 HLS 已从 `test-streams.mux.dev` 换到 Apple `devstreaming-cdn` 公开测试流
 - 另外 2 个点播源和 1 个直播源仍是 `example.com` 占位，`enabled: false`
 
 ## 4. 架构
