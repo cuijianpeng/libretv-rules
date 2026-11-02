@@ -94,7 +94,7 @@ wCt3pHJ/aDpOEuQSPOlc0DFC/v+2TXkCEKdJicODJaI=
 
 ```bash
 flutter run -d macos \
-  --dart-define=RULEPACK_URL=https://cdn.jsdelivr.net/gh/cuijianpeng/libretv-rules@v2/manifest.json \
+  --dart-define=RULEPACK_URL=https://raw.githubusercontent.com/cuijianpeng/libretv-rules/v6/manifest.json \
   --dart-define=RULEPACK_PUBLIC_KEY=<公钥>
 ```
 

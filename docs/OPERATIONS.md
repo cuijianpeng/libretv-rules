@@ -186,8 +186,10 @@ git push origin main --tags
 App 固定 tag 拉取：
 
 ```
-https://cdn.jsdelivr.net/gh/cuijianpeng/libretv-rules@v2/manifest.json
+https://raw.githubusercontent.com/cuijianpeng/libretv-rules/v6/manifest.json
 ```
+
+jsDelivr 可作备用镜像；fixture 源已固定 raw tag，避免 CDN 新 tag 缓存问题。
 
 ### 更新 App 内置基线
 
