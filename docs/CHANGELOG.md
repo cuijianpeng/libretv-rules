@@ -279,6 +279,6 @@ App 本地仓库：
 
 ### 验证更新
 
-- `flutter test` 18 个测试通过
+- `flutter test` 19 个测试通过
 - `flutter build macos --debug` 成功
 - `flutter build ios --simulator --debug` 成功
