@@ -236,3 +236,42 @@ App 本地仓库：
 
 - `c6bdbc8 feat: persist source enable overrides`
 - 本轮后续提交见 `git log`
+
+## 真实推荐 / 片单 / 聚合
+
+### 首页真实推荐
+
+- `DoubanService` 直连豆瓣 `j/search_subjects`
+- 热门电影、热门剧集两条 rail
+- 点击豆瓣条目按标题跳到搜索页，自动匹配已启用源
+- 海报带 Referer 请求头
+- 豆瓣失败时回退 mock
+
+### 片单 / 收藏
+
+- `FavoritesStore` + `shared_preferences`
+- 详情弹层收藏按钮
+- 直播频道收藏按钮
+- 「片单」页：继续观看 + 收藏两个 tab
+- 历史条目可删除，收藏可取消
+- 点击历史继续播放，点击收藏按类型播放/搜索
+
+### 搜索聚合
+
+- 同名 + 同年结果合并为一张卡片
+- 多来源显示「N 个来源」
+- 点击多来源卡片弹出源选择
+- 单来源直接进详情
+
+### 公开版权源 / v5
+
+- 新增 `open-movies`：Blender / W3C 公共版权影片，启用
+- 新增 `archive-org` 规则和源：Internet Archive 公共领域影片，默认关闭
+- 规则包 `v5` 签名并打 tag
+- App 默认远程地址切到 v5
+
+### 验证更新
+
+- `flutter test` 18 个测试通过
+- `flutter build macos --debug` 成功
+- `flutter build ios --simulator --debug` 成功
