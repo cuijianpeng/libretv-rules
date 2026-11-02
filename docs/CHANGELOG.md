@@ -270,6 +270,13 @@ App 本地仓库：
 - 规则包 `v5` 签名并打 tag
 - App 默认远程地址切到 v5
 
+### v6 fixture 可用性修复
+
+- jsDelivr 对新建 tag 的 fixture 偶发 404/超时
+- 演示源和公开版权源的 JSON 地址改为 raw.githubusercontent 固定 tag
+- 规则包 `v6` 重新签名并打 tag
+- App 默认远程地址切到 v6
+
 ### 验证更新
 
 - `flutter test` 18 个测试通过

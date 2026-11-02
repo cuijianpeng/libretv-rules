@@ -69,7 +69,8 @@
 - 启用直播源：iptv-org 中国、中文、香港、台湾 4 个公开 M3U 索引
 - `archive-org` 源默认关闭：大陆网络通常无法直连 archive.org
 - 演示源 `demo-fixture` 数据在 `fixtures/demo/cms.json`，`open-movies` 数据在 `fixtures/open-movies/cms.json`
-- `manifest.json` 已签名（version 5），tag `v5`
+- `manifest.json` 已签名（version 6），tag `v6`
+- 演示/公开版权 fixture 改用 raw.githubusercontent 固定 tag，避免 jsDelivr 偶发超时
 - 另外 2 个点播源和 1 个直播源仍是 `example.com` 占位，`enabled: false`
 
 ## 4. 架构
