@@ -42,13 +42,14 @@
   - `html-regex`
   - `direct`
 - 搜索页：多源并发、源选择、结果网格、详情、选集、播放
-- 源管理页：只读展示源/规则/启用状态
+- 源管理页：展示源/规则，可在本地启用/停用
+- 源启用覆盖存 `shared_preferences`，支持恢复默认
 - 首页右上角规则包状态徽章
 
 验证：
 
 - `flutter analyze` 无问题
-- `flutter test` 8 个测试通过
+- `flutter test` 9 个测试通过
 - `flutter build macos --debug` 成功
 - App 启动正常
 
