@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "libretv-rules",
-  "version": 2,
+  "version": 3,
   "minAppVersion": "0.1.0",
-  "publishedAt": "2026-11-02T08:38:01.290Z",
+  "publishedAt": "2026-11-02T08:59:41.839Z",
   "files": [
     {
       "path": "rules/cms-standard.json",
@@ -38,5 +38,5 @@
       "sha256": "88eb7e9c4ee5ca4242b7edaec6cc02e1a65fd2eea2eedfb6fd49988f386e36bc"
     }
   ],
-  "signature": ""
+  "signature": "F3miGUSLfLszjE0dr9/LVirTFFxL8NSJv/u6S1svhtd4cg4Zf7IY+qT2APIZ0s+XSauJKfnfoD9XTIolIATyDw=="
 }
