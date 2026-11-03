@@ -614,6 +614,18 @@ App 本地仓库：
 - 播放器固定暗色皮肤、侧栏 App 图标保留
 - App 版本升到 1.1.7+9
 
+### TV 模式骨架
+
+- 新增 `TV_MODE` 编译开关，桌面版不受影响
+- 新增 `lib/tv/` TV 展示层
+- TV 主壳层：左侧 128px 大导航
+- TV 首页：Hero、继续观看、电影·热门/最新、剧集·热门/最新
+- 启用 `TvTokens.tv`：48 overscan、220 海报、520 Hero
+- `FocusableSurface` 在 TV 模式聚焦时自动滚动
+- 搜索/直播/片单/设置暂时复用桌面页面
+- 运行：`flutter run -d macos --dart-define=TV_MODE=true`
+- App 版本升到 1.2.0+10
+
 ### 验证更新
 
 - `flutter test` 71 个测试通过
