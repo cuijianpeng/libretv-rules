@@ -97,7 +97,7 @@ Node 20+，无第三方依赖。
 
 ## 5. 演示源
 
-仓库内置一个公开测试源 `demo-fixture`：
+仓库内置一个公开测试源 `demo-fixture`（默认已停用，可在源管理里启用）：
 
 - 源地址：`https://cdn.jsdelivr.net/gh/cuijianpeng/libretv-rules@main/fixtures/demo/cms.json`
 - 数据：`fixtures/demo/cms.json`
@@ -186,7 +186,7 @@ git push origin main --tags
 App 固定 tag 拉取：
 
 ```
-https://ghproxy.net/https://raw.githubusercontent.com/cuijianpeng/libretv-rules/v13/manifest.json
+https://ghproxy.net/https://raw.githubusercontent.com/cuijianpeng/libretv-rules/v14/manifest.json
 ```
 
 jsDelivr（`fastly.jsdelivr.net` / `gcore.jsdelivr.net`）可作备用镜像；

@@ -438,6 +438,14 @@ App 本地仓库：
 - 搜索页输入框与搜索按钮统一 46px
 - 搜索按钮关闭焦点缩放，避免聚焦时看起来更高
 
+### v14 停用示例/演示源
+
+- JSON 不支持注释，用 `enabled: false` 等价保留但不启用
+- `demo-fixture` 从启用改为停用
+- `example-cms`、`example-http-json`、`example-live` 保持停用并补充说明
+- 默认启用源从 12 个减到 11 个
+- manifest `v14` 签名并打 tag
+
 ### 验证更新
 
 - `flutter test` 40 个测试通过

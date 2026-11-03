@@ -9,7 +9,11 @@
       "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
       "rule": "m3u",
       "enabled": true,
-      "tags": ["公开测试", "IPTV", "中国"],
+      "tags": [
+        "公开测试",
+        "IPTV",
+        "中国"
+      ],
       "note": "iptv-org 社区公开索引，约 155 个频道；频道可用性由上游决定。"
     },
     {
@@ -18,7 +22,11 @@
       "url": "https://iptv-org.github.io/iptv/languages/zho.m3u",
       "rule": "m3u",
       "enabled": true,
-      "tags": ["公开测试", "IPTV", "中文"],
+      "tags": [
+        "公开测试",
+        "IPTV",
+        "中文"
+      ],
       "note": "按语言聚合的中文频道，约 226 个，含大陆、港台及海外华语台。"
     },
     {
@@ -27,7 +35,11 @@
       "url": "https://iptv-org.github.io/iptv/countries/hk.m3u",
       "rule": "m3u",
       "enabled": true,
-      "tags": ["公开测试", "IPTV", "香港"],
+      "tags": [
+        "公开测试",
+        "IPTV",
+        "香港"
+      ],
       "note": "约 17 个频道，部分频道仅限香港地区。"
     },
     {
@@ -36,7 +48,11 @@
       "url": "https://iptv-org.github.io/iptv/countries/tw.m3u",
       "rule": "m3u",
       "enabled": true,
-      "tags": ["公开测试", "IPTV", "台湾"],
+      "tags": [
+        "公开测试",
+        "IPTV",
+        "台湾"
+      ],
       "note": "约 33 个频道，部分频道有地区限制。"
     },
     {
@@ -45,7 +61,11 @@
       "url": "https://iptv-org.github.io/iptv/countries/mo.m3u",
       "rule": "m3u",
       "enabled": true,
-      "tags": ["公开测试", "IPTV", "澳门"],
+      "tags": [
+        "公开测试",
+        "IPTV",
+        "澳门"
+      ],
       "note": "约 7 个频道，以澳门广播电视（TDM）为主，部分频道非 24 小时播出。"
     },
     {
@@ -54,7 +74,11 @@
       "url": "https://iptv-org.github.io/iptv/countries/sg.m3u",
       "rule": "m3u",
       "enabled": true,
-      "tags": ["公开测试", "IPTV", "新加坡"],
+      "tags": [
+        "公开测试",
+        "IPTV",
+        "新加坡"
+      ],
       "note": "约 11 个频道，含新传媒华语频道，部分有地区限制。"
     },
     {
@@ -63,7 +87,11 @@
       "url": "https://iptv-org.github.io/iptv/countries/my.m3u",
       "rule": "m3u",
       "enabled": true,
-      "tags": ["公开测试", "IPTV", "马来西亚"],
+      "tags": [
+        "公开测试",
+        "IPTV",
+        "马来西亚"
+      ],
       "note": "约 21 个频道，含部分华语频道，多数有地区限制。"
     },
     {
@@ -72,7 +100,11 @@
       "url": "https://iptv-org.github.io/iptv/countries/jp.m3u",
       "rule": "m3u",
       "enabled": true,
-      "tags": ["公开测试", "IPTV", "日本"],
+      "tags": [
+        "公开测试",
+        "IPTV",
+        "日本"
+      ],
       "note": "约 7 个频道，数量少，部分为购物或国际频道。"
     },
     {
@@ -81,7 +113,11 @@
       "url": "https://iptv-org.github.io/iptv/categories/movies.m3u",
       "rule": "m3u",
       "enabled": false,
-      "tags": ["公开测试", "IPTV", "电影"],
+      "tags": [
+        "公开测试",
+        "IPTV",
+        "电影"
+      ],
       "note": "约 773 个电影类频道，数量大、失效多，默认关闭，按需在源管理里开启。"
     },
     {
@@ -90,7 +126,11 @@
       "url": "https://iptv-org.github.io/iptv/categories/news.m3u",
       "rule": "m3u",
       "enabled": false,
-      "tags": ["公开测试", "IPTV", "新闻"],
+      "tags": [
+        "公开测试",
+        "IPTV",
+        "新闻"
+      ],
       "note": "约 1051 个频道，数量过大，默认关闭。"
     },
     {
@@ -99,7 +139,11 @@
       "url": "https://iptv-org.github.io/iptv/categories/sports.m3u",
       "rule": "m3u",
       "enabled": false,
-      "tags": ["公开测试", "IPTV", "体育"],
+      "tags": [
+        "公开测试",
+        "IPTV",
+        "体育"
+      ],
       "note": "约 479 个频道，多数有地区限制，默认关闭。"
     },
     {
@@ -108,7 +152,11 @@
       "url": "https://iptv-org.github.io/iptv/categories/kids.m3u",
       "rule": "m3u",
       "enabled": false,
-      "tags": ["公开测试", "IPTV", "少儿"],
+      "tags": [
+        "公开测试",
+        "IPTV",
+        "少儿"
+      ],
       "note": "约 434 个频道，默认关闭。"
     },
     {
@@ -117,7 +165,11 @@
       "url": "https://iptv-org.github.io/iptv/categories/documentary.m3u",
       "rule": "m3u",
       "enabled": false,
-      "tags": ["公开测试", "IPTV", "纪录"],
+      "tags": [
+        "公开测试",
+        "IPTV",
+        "纪录"
+      ],
       "note": "约 256 个频道，默认关闭。"
     },
     {
@@ -126,7 +178,11 @@
       "url": "https://iptv-org.github.io/iptv/categories/music.m3u",
       "rule": "m3u",
       "enabled": false,
-      "tags": ["公开测试", "IPTV", "音乐"],
+      "tags": [
+        "公开测试",
+        "IPTV",
+        "音乐"
+      ],
       "note": "约 781 个频道，默认关闭。"
     },
     {
@@ -135,7 +191,11 @@
       "url": "https://iptv-org.github.io/iptv/index.m3u",
       "rule": "m3u",
       "enabled": false,
-      "tags": ["公开测试", "IPTV", "全量"],
+      "tags": [
+        "公开测试",
+        "IPTV",
+        "全量"
+      ],
       "note": "约 11399 个频道，体积大、失效多，仅建议调试时开启。"
     },
     {
@@ -144,7 +204,12 @@
       "url": "https://ghproxy.net/https://raw.githubusercontent.com/cuijianpeng/libretv-rules/v11/fixtures/live/stable-cn.m3u",
       "rule": "m3u",
       "enabled": true,
-      "tags": ["精选", "IPTV", "央视", "卫视"],
+      "tags": [
+        "精选",
+        "IPTV",
+        "央视",
+        "卫视"
+      ],
       "note": "从 iptv-org 中国列表里筛出的 19 个实测可连频道（CCTV 1-17、CGTN、湖南/安徽/西藏卫视）。比整包 155 个频道稳定，但上游失效仍需定期重筛。"
     },
     {
@@ -153,7 +218,10 @@
       "url": "https://ghproxy.net/https://raw.githubusercontent.com/cuijianpeng/libretv-rules/v13/fixtures/live/stable-cn-extended.m3u",
       "rule": "m3u",
       "enabled": false,
-      "tags": ["IPTV", "卫视"],
+      "tags": [
+        "IPTV",
+        "卫视"
+      ],
       "note": "23 个省级/地方卫视，未做可用性过滤；多数有地区限制或暂时失效，默认关闭，按需开启。"
     },
     {
@@ -163,8 +231,11 @@
       "epg": "https://example.com/epg.xml",
       "rule": "m3u",
       "enabled": false,
-      "tags": ["示例", "IPTV"],
-      "note": "占位示例，请替换成自己的 M3U 订阅。"
+      "tags": [
+        "示例",
+        "IPTV"
+      ],
+      "note": "已停用保留（相当于注释掉）：占位示例，需要时替换成自己的 M3U 订阅。"
     }
   ]
 }
