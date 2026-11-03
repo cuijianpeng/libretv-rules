@@ -559,6 +559,15 @@ App 本地仓库：
 - 选中后保留当前集数切换
 - 首页/片单/观看历史进入的播放页同样支持
 
+### 发布基线
+
+- App 版本升到 1.1.0+2
+- macOS / iOS / Android 图标替换为 LibreTV 图标
+- macOS Release 构建通过，Universal（x86_64 + arm64）
+- 生成 `LibreTV-1.1.0-macos.dmg`，含 Applications 快捷方式
+- 增加 `libretv_app/RELEASE.md` 发布说明
+- 源管理新增导出 LibreTV-SourceList JSON
+
 ### 验证更新
 
 - `flutter test` 73 个测试通过

@@ -91,13 +91,14 @@
 
 ## 阶段 4：发布
 
-- [ ] 规则包正式签名发布
-- [ ] App 版本号 / 图标 / 启动图
-- [ ] macOS release 构建
+- [x] 规则包正式签名发布
+- [x] App 版本号 / 图标
+- [ ] 启动图
+- [x] macOS release 构建 + DMG
 - [ ] Android release 构建
 - [ ] iOS 归档
 - [ ] GitHub App 仓库
-- [ ] 发布说明 / 安装说明
+- [x] 发布说明 / 安装说明
 
 ## 已知风险
 
