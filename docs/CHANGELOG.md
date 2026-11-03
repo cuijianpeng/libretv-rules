@@ -568,8 +568,17 @@ App 本地仓库：
 - 增加 `libretv_app/RELEASE.md` 发布说明
 - 源管理新增导出 LibreTV-SourceList JSON
 
+### 首页推荐简化
+
+- 移除 Bangumi / 影视热榜入口，首页只保留豆瓣
+- 推荐拆成「豆瓣 · 电影」「豆瓣 · 剧集」两个独立区块
+- 两个区块各自选择标签，不再先选数据源再选类型再选标签
+- 首页顶部增加「显示推荐」开关，可直接隐藏/恢复
+- 移除未使用的 Bangumi / 热榜服务
+- App 版本升到 1.1.1+3，重建 macOS Release / DMG
+
 ### 验证更新
 
-- `flutter test` 73 个测试通过
+- `flutter test` 71 个测试通过
 - `flutter build macos --debug` 成功
 - `flutter build ios --simulator --debug` 成功
