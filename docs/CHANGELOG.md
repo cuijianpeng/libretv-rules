@@ -446,6 +446,13 @@ App 本地仓库：
 - 默认启用源从 12 个减到 11 个
 - manifest `v14` 签名并打 tag
 
+
+### 搜索页隐藏未启用源
+
+- 搜索页只展示 `enabled: true` 的源
+- 未启用源改由源管理控制，不再出现在搜索页
+- v14 里 demo/example 源实际是 `enabled: false`，并未删除
+
 ### 验证更新
 
 - `flutter test` 40 个测试通过
