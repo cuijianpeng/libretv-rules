@@ -468,8 +468,16 @@ App 本地仓库：
 - Hero「立即播放」、搜索按钮、详情播放、直播播放统一处理
 - 海报角标/评分文字固定白色，避免亮色主题下深色文字压在深色遮罩上
 
+
+### 播放器设置 / 源测速 / EPG 匹配
+
+- 播放器「播放设置」：画面比例、音轨选择、内嵌字幕选择、外挂字幕入口
+- 搜索结果按源延迟排序，源 chip 显示 `xxxms`
+- EPG 支持 tvg-id 归一化与 display-name 回退匹配
+- 下载遇到 SAMPLE-AES/DRM 时给出明确不支持提示
+
 ### 验证更新
 
-- `flutter test` 40 个测试通过
+- `flutter test` 41 个测试通过
 - `flutter build macos --debug` 成功
 - `flutter build ios --simulator --debug` 成功
