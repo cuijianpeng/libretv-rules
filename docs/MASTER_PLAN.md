@@ -50,7 +50,8 @@
 - [x] 移动端布局（底部导航）
 - [x] TV 模式骨架（左侧 rail + TV 首页）
 - [x] TV 搜索页 + 屏幕键盘
-- [ ] TV 详情/播放器/直播/设置深度适配
+- [x] TV 详情页
+- [ ] TV 播放器/直播/设置深度适配
 - [x] 构建验证（macOS / iOS simulator）
 - [ ] Android 构建（本机缺 Android SDK）
 
