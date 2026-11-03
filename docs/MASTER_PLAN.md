@@ -56,7 +56,8 @@
 - [x] TV 直播页
 - [x] TV 片单页
 - [x] TV 设置页
-- [ ] TV 源管理/订阅/下载
+- [x] TV 源管理/订阅/下载
+- [x] Android TV leanback 自动检测
 - [x] 构建验证（macOS / iOS simulator）
 - [ ] Android 构建（本机缺 Android SDK）
 
