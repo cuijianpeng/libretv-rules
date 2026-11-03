@@ -59,7 +59,7 @@
 - [x] TV 源管理/订阅/下载
 - [x] Android TV leanback 自动检测
 - [x] 构建验证（macOS / iOS simulator）
-- [ ] Android 构建（本机缺 Android SDK）
+- [x] Android Debug / Release APK 构建
 
 验收：
 
@@ -104,7 +104,7 @@
 - [x] App 版本号 / 图标
 - [ ] 启动图
 - [x] macOS release 构建 + DMG
-- [ ] Android release 构建
+- [x] Android release 构建（arm64 / armv7 / x86_64）
 - [ ] iOS 归档
 - [ ] GitHub App 仓库
 - [x] 发布说明 / 安装说明

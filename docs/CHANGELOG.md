@@ -671,6 +671,18 @@ App 本地仓库：
 - 真 Android TV 自动进入 TV 模式，手机保持普通界面
 - App 版本升到 1.2.5+15
 
+### Android TV 实机验证
+
+- Android Debug / Release APK 构建成功
+- Android TV 模拟器自动识别 leanback 进入 TV 模式
+- TV 首页、直播、搜索页在 1080p 模拟器验证
+- 修复 TV 端 DPAD_CENTER 不触发确认
+- 修复左侧 rail 底部溢出
+- 修复 TV 直播右侧标题被挤成竖排
+- TV 源管理、订阅、下载管理、设置页接入
+- 新增 arm64 / armv7 / x86_64 分架构 Release APK
+- App 版本升到 1.2.6+16
+
 ### 验证更新
 
 - `flutter test` 71 个测试通过
