@@ -1,8 +1,83 @@
 {
   "$schema": "../schemas/sources-live.schema.json",
-  "version": 3,
-  "updatedAt": "2026-11-02",
+  "version": 4,
+  "updatedAt": "2026-11-04",
   "sources": [
+    {
+      "id": "yifan-4k-3-ffmpeg-3840x2160",
+      "name": "★4K专区 (3台·ffmpeg实测3840x2160)",
+      "url": "https://gist.githubusercontent.com/yifanwang-yet/c2c9263066c0c5d20f50ce9b31d40e7e/raw/libretv-4k.m3u",
+      "rule": "m3u",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "IPTV",
+        "4K"
+      ],
+      "note": "来自用户提供的精选直播源，频道可用性由上游决定。"
+    },
+    {
+      "id": "yifan-zbds-iptv4-521-epg",
+      "name": "zbds IPTV4 (521台·带台标EPG)",
+      "url": "https://live.zbds.top/tv/iptv4.m3u",
+      "rule": "m3u",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "IPTV"
+      ],
+      "note": "来自用户提供的精选直播源，频道可用性由上游决定。"
+    },
+    {
+      "id": "yifan-vbskycn-iptv4-6",
+      "name": "vbskycn IPTV4 (6小时自动更新)",
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
+      "rule": "m3u",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "IPTV"
+      ],
+      "note": "来自用户提供的精选直播源，频道可用性由上游决定。"
+    },
+    {
+      "id": "yifan-iptv-org-507-4k",
+      "name": "iptv-org 中国大陆 (507台·含4K条目)",
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
+      "rule": "m3u",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "IPTV",
+        "4K"
+      ],
+      "note": "来自用户提供的精选直播源，频道可用性由上游决定。"
+    },
+    {
+      "id": "yifan-aptv-4k",
+      "name": "aptv 综合源 (含卫视4K条目)",
+      "url": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "rule": "m3u",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "IPTV",
+        "4K"
+      ],
+      "note": "来自用户提供的精选直播源，频道可用性由上游决定。"
+    },
+    {
+      "id": "yifan-yang-123",
+      "name": "YanG 综合源 (123台)",
+      "url": "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+      "rule": "m3u",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "IPTV"
+      ],
+      "note": "来自用户提供的精选直播源，频道可用性由上游决定。"
+    },
     {
       "id": "iptv-org-cn",
       "name": "iptv-org 中国频道（公开测试）",
@@ -223,19 +298,6 @@
         "卫视"
       ],
       "note": "23 个省级/地方卫视，未做可用性过滤；多数有地区限制或暂时失效，默认关闭，按需开启。"
-    },
-    {
-      "id": "example-live",
-      "name": "示例直播源",
-      "url": "https://example.com/list.m3u",
-      "epg": "https://example.com/epg.xml",
-      "rule": "m3u",
-      "enabled": false,
-      "tags": [
-        "示例",
-        "IPTV"
-      ],
-      "note": "已停用保留（相当于注释掉）：占位示例，需要时替换成自己的 M3U 订阅。"
     }
   ]
 }

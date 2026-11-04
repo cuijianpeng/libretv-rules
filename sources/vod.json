@@ -1,20 +1,540 @@
 {
   "$schema": "../schemas/sources-vod.schema.json",
-  "version": 3,
-  "updatedAt": "2026-11-03",
+  "version": 4,
+  "updatedAt": "2026-11-04",
   "sources": [
     {
-      "id": "demo-fixture",
-      "name": "LibreTV 演示源（公开测试）",
+      "id": "bfzyapi-com",
+      "name": "暴风资源",
       "type": "cms",
-      "url": "https://ghproxy.net/https://raw.githubusercontent.com/cuijianpeng/libretv-rules/v9/fixtures/demo/cms.json",
+      "url": "https://bfzyapi.com/api.php/provide/vod",
       "rule": "cms-standard",
-      "enabled": false,
+      "enabled": true,
       "tags": [
-        "演示",
-        "测试"
+        "精选",
+        "采集站"
       ],
-      "note": "已停用保留（相当于注释掉）：静态 JSON 测试源，仅用于验证链路。需要时在源管理里重新启用。"
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "cj-ffzyapi-com",
+      "name": "非凡资源",
+      "type": "cms",
+      "url": "https://cj.ffzyapi.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "cj-lziapi-com",
+      "name": "量子资源",
+      "type": "cms",
+      "url": "https://cj.lziapi.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "api-wujinapi-me",
+      "name": "无尽资源",
+      "type": "cms",
+      "url": "https://api.wujinapi.me/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "api-ukuapi88-com",
+      "name": "优酷资源",
+      "type": "cms",
+      "url": "https://api.ukuapi88.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "api-guangsuapi-com",
+      "name": "光速资源",
+      "type": "cms",
+      "url": "https://api.guangsuapi.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "cj-rycjapi-com",
+      "name": "如意资源",
+      "type": "cms",
+      "url": "https://cj.rycjapi.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "jszyapi-com",
+      "name": "极速资源",
+      "type": "cms",
+      "url": "https://jszyapi.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "api-xinlangapi-com",
+      "name": "新狼资源",
+      "type": "cms",
+      "url": "https://api.xinlangapi.com/xinlangapi.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "caiji-dyttzyapi-com",
+      "name": "电影天堂",
+      "type": "cms",
+      "url": "https://caiji.dyttzyapi.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "360zy-com",
+      "name": "360资源",
+      "type": "cms",
+      "url": "https://360zy.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "精选",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "shturl-cc",
+      "name": "豪华资源",
+      "type": "cms",
+      "url": "https://shturl.cc/IPIXo21A4Q1LzsbItClJrdEwtbZ8iY",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "caiji-kuaichezy-org",
+      "name": "快车资源",
+      "type": "cms",
+      "url": "https://caiji.kuaichezy.org/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "cj-yayazy-net",
+      "name": "鸭鸭资源",
+      "type": "cms",
+      "url": "https://cj.yayazy.net/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "api-yparse-com",
+      "name": "步步高资源",
+      "type": "cms",
+      "url": "https://api.yparse.com/api/json",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "hongniuzy2-com",
+      "name": "红牛资源",
+      "type": "cms",
+      "url": "https://hongniuzy2.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "api-niuniuzy-me",
+      "name": "牛牛点播",
+      "type": "cms",
+      "url": "https://api.niuniuzy.me/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "api-ukuapi-com",
+      "name": "U酷资源",
+      "type": "cms",
+      "url": "https://api.ukuapi.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "shturl-cc-2",
+      "name": "CK资源",
+      "type": "cms",
+      "url": "https://shturl.cc/tN80cAwF4ItIaLjthbqZO3iRis",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "api-1080zyku-com",
+      "name": "1080资源库",
+      "type": "cms",
+      "url": "https://api.1080zyku.com/inc/api_mac10.php",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "shturl-cc-3",
+      "name": "飘零资源",
+      "type": "cms",
+      "url": "https://shturl.cc/lmNJ7KvAeiwMzTPSjrWHGPpMPYJC",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "sdzyapi-com",
+      "name": "閃電资源",
+      "type": "cms",
+      "url": "https://sdzyapi.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "jyzyapi-com",
+      "name": "金鹰资源",
+      "type": "cms",
+      "url": "https://jyzyapi.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "huyaapi-com",
+      "name": "虎牙资源",
+      "type": "cms",
+      "url": "https://huyaapi.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "suoniapi-com",
+      "name": "索尼资源",
+      "type": "cms",
+      "url": "https://suoniapi.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "subocaiji-com",
+      "name": "速播资源",
+      "type": "cms",
+      "url": "https://subocaiji.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "collect-wolongzyw-com",
+      "name": "卧龙资源2",
+      "type": "cms",
+      "url": "https://collect.wolongzyw.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "caiji-maotaizy-cc",
+      "name": "茅台资源",
+      "type": "cms",
+      "url": "https://caiji.maotaizy.cc/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "ikunzyapi-com",
+      "name": "iKun资源",
+      "type": "cms",
+      "url": "https://ikunzyapi.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "shturl-cc-4",
+      "name": "旺旺短剧",
+      "type": "cms",
+      "url": "https://shturl.cc/jXeXtfU0wBrpjsL3x4aj5Ggx4u",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "api-apibdzy-com",
+      "name": "百度云资源",
+      "type": "cms",
+      "url": "https://api.apibdzy.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "m3u8-apiyhzy-com",
+      "name": "樱花资源",
+      "type": "cms",
+      "url": "https://m3u8.apiyhzy.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "api-zuidapi-com",
+      "name": "最大资源",
+      "type": "cms",
+      "url": "https://api.zuidapi.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "shturl-cc-5",
+      "name": "魔都资源",
+      "type": "cms",
+      "url": "https://shturl.cc/XB9CPErgujUy3lMCylhIS8kyPRsVOYYQTP",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "shturl-cc-6",
+      "name": "魔爪资源",
+      "type": "cms",
+      "url": "https://shturl.cc/UFQO224wfdUplStOfS6o9IBECHGluml",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "shturl-cc-7",
+      "name": "豆瓣资源",
+      "type": "cms",
+      "url": "https://shturl.cc/zsIHjL6qV83Lc1pwfhjT69M9Cm",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "wolongzyw-com",
+      "name": "卧龙资源",
+      "type": "cms",
+      "url": "https://wolongzyw.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "tyyszy-com",
+      "name": "天涯资源",
+      "type": "cms",
+      "url": "https://tyyszy.com/api.php/provide/vod",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "shturl-cc-8",
+      "name": "电影天堂资源",
+      "type": "cms",
+      "url": "https://shturl.cc/nl8wqT1IOZNoNul5BABzkF9pCqQBTZmSIa4gVU",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "shturl-cc-9",
+      "name": "如意资源",
+      "type": "cms",
+      "url": "https://shturl.cc/Lw2drYhrBuaWof7He9nmwtB4tWpXqNDq",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
+    },
+    {
+      "id": "shturl-cc-10",
+      "name": "非凡影视",
+      "type": "cms",
+      "url": "https://shturl.cc/CoqPLEByTovhbC77T2GS8QxQhK",
+      "rule": "cms-standard",
+      "enabled": true,
+      "tags": [
+        "采集",
+        "采集站"
+      ],
+      "note": "来自用户提供的可用源列表，启用前建议先测活。"
     },
     {
       "id": "open-movies",
@@ -57,33 +577,6 @@
         "纪录片"
       ],
       "note": "按关键词搜索 archive.org 的公共领域影片。大陆网络通常无法直连（连接超时），需要代理；默认关闭。"
-    },
-    {
-      "id": "example-cms",
-      "name": "示例采集站",
-      "type": "cms",
-      "url": "https://example.com/api.php/provide/vod",
-      "detail": "https://example.com",
-      "rule": "cms-standard",
-      "enabled": false,
-      "tags": [
-        "示例",
-        "电影",
-        "剧集"
-      ],
-      "note": "已停用保留（相当于注释掉）：占位示例，需要时替换成自己的源。"
-    },
-    {
-      "id": "example-http-json",
-      "name": "示例 JSON 接口",
-      "type": "http-json",
-      "url": "https://api.example.com/videos",
-      "rule": "http-json",
-      "enabled": false,
-      "tags": [
-        "示例"
-      ],
-      "note": "已停用保留（相当于注释掉）：展示 http-json 规则如何挂到源上。"
     }
   ]
 }
